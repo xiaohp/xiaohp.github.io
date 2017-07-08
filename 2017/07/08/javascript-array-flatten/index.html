@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="最近想起小时候的两个想法，暂且叫他“相交的直线”和“兔子追乌龟”。 先说第一个想法，“相交的直线” 结论：相交的直线不可以通过旋转达到平行。推导过程：两条相交的直线，旋转其中的一条 ，旋转就是两直线交点不断移动的过程，由于直线是无限长的，交点不断后移，但是一直存在，所以不可能达到平行，只能无限接近于平行。 第二个想法是“兔子追乌龟”结论：兔子永远追不上乌龟。推导过程： 龟兔赛跑中，兔子在乌龟身后一">
-<meta name="keywords" content="随笔">
+<meta name="description" content="flatten one level方法一 利用 for 循环处理1234567891011121314151617var flatten = function(array) &amp;#123;    var res = []    for (var i = 0; i &amp;lt; array.length; i++) &amp;#123;        var a = array[i]        if (Arr">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小时候的两个想法">
-<meta property="og:url" content="http://yoursite.com/2017/02/03/childhood-idea/index.html">
+<meta property="og:title" content="Javascript 拍平数组的 N 种方法">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/javascript-array-flatten/index.html">
 <meta property="og:site_name" content="肖海平的博客">
-<meta property="og:description" content="最近想起小时候的两个想法，暂且叫他“相交的直线”和“兔子追乌龟”。 先说第一个想法，“相交的直线” 结论：相交的直线不可以通过旋转达到平行。推导过程：两条相交的直线，旋转其中的一条 ，旋转就是两直线交点不断移动的过程，由于直线是无限长的，交点不断后移，但是一直存在，所以不可能达到平行，只能无限接近于平行。 第二个想法是“兔子追乌龟”结论：兔子永远追不上乌龟。推导过程： 龟兔赛跑中，兔子在乌龟身后一">
-<meta property="og:updated_time" content="2017-02-07T08:42:46.000Z">
+<meta property="og:description" content="flatten one level方法一 利用 for 循环处理1234567891011121314151617var flatten = function(array) &amp;#123;    var res = []    for (var i = 0; i &amp;lt; array.length; i++) &amp;#123;        var a = array[i]        if (Arr">
+<meta property="og:updated_time" content="2017-07-08T16:05:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小时候的两个想法">
-<meta name="twitter:description" content="最近想起小时候的两个想法，暂且叫他“相交的直线”和“兔子追乌龟”。 先说第一个想法，“相交的直线” 结论：相交的直线不可以通过旋转达到平行。推导过程：两条相交的直线，旋转其中的一条 ，旋转就是两直线交点不断移动的过程，由于直线是无限长的，交点不断后移，但是一直存在，所以不可能达到平行，只能无限接近于平行。 第二个想法是“兔子追乌龟”结论：兔子永远追不上乌龟。推导过程： 龟兔赛跑中，兔子在乌龟身后一">
+<meta name="twitter:title" content="Javascript 拍平数组的 N 种方法">
+<meta name="twitter:description" content="flatten one level方法一 利用 for 循环处理1234567891011121314151617var flatten = function(array) &amp;#123;    var res = []    for (var i = 0; i &amp;lt; array.length; i++) &amp;#123;        var a = array[i]        if (Arr">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/03/childhood-idea/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/08/javascript-array-flatten/"/>
 
 
 
 
 
-  <title> 小时候的两个想法 | 肖海平的博客 </title>
+  <title> Javascript 拍平数组的 N 种方法 | 肖海平的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/03/childhood-idea/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/08/javascript-array-flatten/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -281,7 +281,7 @@
             
             
               
-                小时候的两个想法
+                Javascript 拍平数组的 N 种方法
               
             
           </h1>
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-03T22:53:29+08:00">
-                2017-02-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T23:10:29+08:00">
+                2017-07-08
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂物间/" itemprop="url" rel="index">
-                    <span itemprop="name">杂物间</span>
+                  <a href="/categories/笔记本/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记本</span>
                   </a>
                 </span>
 
@@ -354,14 +354,11 @@
       
 
       
-        <p>最近想起小时候的两个想法，暂且叫他“相交的直线”和“兔子追乌龟”。</p>
-<p>先说第一个想法，“相交的直线”</p>
-<p>结论：相交的直线不可以通过旋转达到平行。<br>推导过程：两条相交的直线，旋转其中的一条 ，旋转就是两直线交点不断移动的过程，由于直线是无限长的，交点不断后移，但是一直存在，所以不可能达到平行，只能无限接近于平行。</p>
-<p>第二个想法是“兔子追乌龟”<br>结论：兔子永远追不上乌龟。<br>推导过程： 龟兔赛跑中，兔子在乌龟身后一段距离，开始追赶乌龟。兔子追到乌龟刚刚出发的位置时，乌龟已经移动了一段距离，兔子再追上去时，乌龟又移动了一段距离。依此类推，兔子永远追不上乌龟，只能无限接近于乌龟。</p>
-<p>当时知道这些结论都是违反常识的，但是问题出在哪里又说不清楚。推理过程看起来符合逻辑，不知从哪个角度如何解决，也就搁置了下来。</p>
-<p>直到最近阅读《西方哲学史讲演录》，里面提到古希腊哲学家芝诺对运动的否定论证才想起来。</p>
-<p>上述两个想法本质是一样的，都是极限问题。假设兔子在乌龟后方10m，乌龟速度1m/s，兔子速度11m/s。则我们知道兔子需要1s的时间追上乌龟。按照想法中的假设，兔子追上乌龟出发点需要 10/11s，然后需要10/121s，以此类推。对这个时间求极限就是1s。因为时间项足够多，给人以总时间足够长的错觉。其实时间是越来越短，总时间是有极限的。</p>
-<p>很多问题都会随着时间的流逝，变得不是问题。</p>
+        <h2 id="flatten-one-level"><a href="#flatten-one-level" class="headerlink" title="flatten one level"></a>flatten one level</h2><p>方法一 利用 <code>for</code> 循环处理<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> flatten = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = []</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</div><div class="line">        <span class="keyword">var</span> a = array[i]</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(a)) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</div><div class="line">                <span class="keyword">var</span> b = a[j]</div><div class="line">                res.push(b)</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            res.push(a)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res</div><div class="line">&#125;</div><div class="line"></div><div class="line">flatten([<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, [<span class="number">4</span>]], <span class="number">5</span>]]) <span class="comment">// =&gt; [1, 2, [3, [4]], 5]</span></div></pre></td></tr></table></figure></p>
+<p>方法二 利用数组的 <code>reduce</code> 方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> flatten = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = array.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> a.concat(b)</div><div class="line">    &#125;, [])</div><div class="line">    <span class="keyword">return</span> res</div><div class="line">&#125;</div><div class="line"></div><div class="line">flatten([<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, [<span class="number">4</span>]], <span class="number">5</span>]]) <span class="comment">// =&gt; [1, 2, [3, [4]], 5]</span></div></pre></td></tr></table></figure></p>
+<p>方法三 用 ES6 改写方法二<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> flatten = <span class="function"><span class="params">list</span> =&gt;</span> list.reduce(</div><div class="line">    <span class="function">(<span class="params">a, b</span>) =&gt;</span> a.concat(b), []</div><div class="line">)</div><div class="line"></div><div class="line">flatten([<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, [<span class="number">4</span>]], <span class="number">5</span>]]) <span class="comment">// =&gt; [1, 2, [3, [4]], 5]</span></div></pre></td></tr></table></figure></p>
+<p>方法四 利用数组的 <code>concat</code> 方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> flatten = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.concat(...array)</div><div class="line">&#125;</div><div class="line"></div><div class="line">flatten([<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, [<span class="number">4</span>]], <span class="number">5</span>]]) <span class="comment">// =&gt; [1, 2, [3, [4]], 5]</span></div></pre></td></tr></table></figure></p>
+<h2 id="flatten-deep"><a href="#flatten-deep" class="headerlink" title="flatten deep"></a>flatten deep</h2><p>递归调用方法三<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> flatten_deep = <span class="function"><span class="params">list</span> =&gt;</span> list.reduce(</div><div class="line">    <span class="function">(<span class="params">a, b</span>) =&gt;</span> a.concat(<span class="built_in">Array</span>.isArray(b) ? flatten_deep(b) : b), []</div><div class="line">)</div><div class="line"></div><div class="line">flatten_deep([<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, [<span class="number">4</span>]], <span class="number">5</span>]]) <span class="comment">// =&gt; [1, 2, 3, 4, 5]</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -412,7 +409,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
           
         </div>
       
@@ -425,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/05/hexo-note/" rel="next" title="Hexo 工具箱">
-                <i class="fa fa-chevron-left"></i> Hexo 工具箱
+              <a href="/2017/04/20/javascript-jquery/" rel="next" title="原生 Javascript 与 jQuery API 对照">
+                <i class="fa fa-chevron-left"></i> 原生 Javascript 与 jQuery API 对照
               </a>
             
           </div>
@@ -434,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/20/javascript-jquery-api/" rel="prev" title="Javascript 实现 jQuery API">
-                Javascript 实现 jQuery API <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -484,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -581,6 +583,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#flatten-one-level"><span class="nav-number">1.</span> <span class="nav-text">flatten one level</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flatten-deep"><span class="nav-number">2.</span> <span class="nav-text">flatten deep</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
