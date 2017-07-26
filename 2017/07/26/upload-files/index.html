@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Javascript," />
+  <meta name="keywords" content="Javascript,jQuery,AJAX," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 利用 typeof 来检查一个没有声明的变量，而不报错。 12345678910// 错误的写法if (v) &amp;#123;  // ...&amp;#">
-<meta name="keywords" content="Javascript">
+<meta name="description" content="form 表单上传传统的上传文件方式，不支持回调，会刷新页面 12345&amp;lt;form action=&quot;/upload/avatar&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&amp;gt;    &amp;lt;input id=&quot;upload-file&quot; type=&quot;file&quot; name=&quot;avatar&quot; required&amp;gt;    &amp;lt;img src">
+<meta name="keywords" content="Javascript,jQuery,AJAX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript 常用函数封装">
-<meta property="og:url" content="http://yoursite.com/2017/03/16/javascript-tools/index.html">
+<meta property="og:title" content="AJAX 上传文件">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/upload-files/index.html">
 <meta property="og:site_name" content="肖海平的博客">
-<meta property="og:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 利用 typeof 来检查一个没有声明的变量，而不报错。 12345678910// 错误的写法if (v) &amp;#123;  // ...&amp;#">
+<meta property="og:description" content="form 表单上传传统的上传文件方式，不支持回调，会刷新页面 12345&amp;lt;form action=&quot;/upload/avatar&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&amp;gt;    &amp;lt;input id=&quot;upload-file&quot; type=&quot;file&quot; name=&quot;avatar&quot; required&amp;gt;    &amp;lt;img src">
 <meta property="og:updated_time" content="2017-07-26T12:29:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript 常用函数封装">
-<meta name="twitter:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 利用 typeof 来检查一个没有声明的变量，而不报错。 12345678910// 错误的写法if (v) &amp;#123;  // ...&amp;#">
+<meta name="twitter:title" content="AJAX 上传文件">
+<meta name="twitter:description" content="form 表单上传传统的上传文件方式，不支持回调，会刷新页面 12345&amp;lt;form action=&quot;/upload/avatar&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&amp;gt;    &amp;lt;input id=&quot;upload-file&quot; type=&quot;file&quot; name=&quot;avatar&quot; required&amp;gt;    &amp;lt;img src">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/16/javascript-tools/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/upload-files/"/>
 
 
 
 
 
-  <title> Javascript 常用函数封装 | 肖海平的博客 </title>
+  <title> AJAX 上传文件 | 肖海平的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/javascript-tools/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/upload-files/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -281,7 +281,7 @@
             
             
               
-                Javascript 常用函数封装
+                AJAX 上传文件
               
             
           </h1>
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T14:10:29+08:00">
-                2017-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T14:10:29+08:00">
+                2017-07-26
               </time>
             
 
@@ -354,23 +354,15 @@
       
 
       
-        <p>自定义 log 函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// var log = console.log.bind(console)</span></div></pre></td></tr></table></figure>
-<p>利用 typeof 来检查一个没有声明的变量，而不报错。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 错误的写法</span></div><div class="line"><span class="keyword">if</span> (v) &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// ReferenceError: v is not defined</span></div><div class="line"></div><div class="line"><span class="comment">// 正确的写法</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> v === <span class="string">"undefined"</span>) &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>利用对象的属性来检查全局变量是否声明</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="string">'a'</span> <span class="keyword">in</span> <span class="built_in">window</span>) &#123;</div><div class="line">  <span class="comment">// 变量 a 声明过</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="comment">// 变量 a 未声明</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>利用 setTimeout 实现异步</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'begin'</span>)</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'function 1'</span>)</div><div class="line">    &#125;, <span class="number">0</span>)</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'function 2'</span>)</div><div class="line">    &#125;, <span class="number">0</span>)</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'end'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">a()</div><div class="line"></div><div class="line"><span class="comment">// begin</span></div><div class="line"><span class="comment">// end</span></div><div class="line"><span class="comment">// function 1</span></div><div class="line"><span class="comment">// function 2</span></div></pre></td></tr></table></figure>
-<p>利用 Object 的 key 不重复特性给数组去重</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> deduplication = <span class="function"><span class="keyword">function</span> (<span class="params">list</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> o =&#123;&#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> l <span class="keyword">of</span> list) &#123;</div><div class="line">        o[l] = <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.keys(o)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>]</div><div class="line"></div><div class="line">deduplication(a)</div><div class="line"><span class="comment">// [1, 2, 5]</span></div></pre></td></tr></table></figure>
-<p>利用 ES6 的 set 进行数组去重</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span> (<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol>
-<li>Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持</li>
-<li>通过代码添加的自定义 data 不会在开发者工具中显示</li>
-<li>jQuery 获取自定义 data, 如果是数字会自动转成 Number</li>
-</ol>
+        <h2 id="form-表单上传"><a href="#form-表单上传" class="headerlink" title="form 表单上传"></a>form 表单上传</h2><p>传统的上传文件方式，不支持回调，会刷新页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/upload/avatar"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"upload-file"</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"avatar"</span> <span class="attr">required</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"preview-img"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"submit-button"</span>&gt;</span>上传<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果是上传图片，可以先在本地预览</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.upload-file'</span>).on(<span class="string">"change"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> picture = <span class="keyword">this</span></div><div class="line">    <span class="comment">// 文件格式检测</span></div><div class="line">    <span class="keyword">if</span> (!(<span class="regexp">/\.jpg$|\.jpeg$|\.png$|\.gif$/i</span>).test(picture.value)) &#123;</div><div class="line">        alert(<span class="string">"上传图片格式不正确，请重新选择!"</span>)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 预览图片</span></div><div class="line">    <span class="keyword">var</span> file = picture.files[<span class="number">0</span>]</div><div class="line">    <span class="comment">// log('文件信息', file)</span></div><div class="line">    <span class="keyword">var</span> img_src = <span class="built_in">window</span>.URL.createObjectURL(file)</div><div class="line">    $(<span class="string">'.preview-img'</span>)[<span class="number">0</span>].src = img_src</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="AJAX-上传"><a href="#AJAX-上传" class="headerlink" title="AJAX 上传"></a>AJAX 上传</h2><p>AJAX 方式获取数据有两种方式，可以使用 <code>form</code> 表单，也可以通过构造 <code>FormData</code> 上传，这里用的第二种</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"upload-file"</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"avatar"</span> <span class="attr">required</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"preview-img"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"submit-button"</span>&gt;</span>上传<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Javascript</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> fd = <span class="literal">null</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> upload = <span class="function"><span class="keyword">function</span>(<span class="params">form_data</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> request = &#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">'/upload/avatar'</span>,</div><div class="line">        <span class="attr">method</span>: <span class="string">'post'</span>,</div><div class="line">        <span class="attr">data</span>: form_data,</div><div class="line">        <span class="attr">contentType</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">processData</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">r</span>) </span>&#123;</div><div class="line">            log(<span class="string">'上传成功'</span>, r)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">error</span>: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">            log(<span class="string">'debug e'</span>, e)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    $.ajax(request)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> bind_evetns = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">'#upload-file'</span>).on(<span class="string">'change'</span>, () =&gt; &#123;</div><div class="line">        <span class="keyword">var</span> element = $(<span class="string">'#upload-file'</span>)</div><div class="line">        <span class="keyword">var</span> file = element.get(<span class="number">0</span>).files[<span class="number">0</span>]</div><div class="line">        preview(file)</div><div class="line">        fd = <span class="keyword">new</span> FormData()</div><div class="line">        fd.append(<span class="string">'avatar'</span>, file)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    $(<span class="string">'#submit-button'</span>).on(<span class="string">'click'</span>, (e) =&gt; &#123;</div><div class="line">        upload(fd)</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> preview = <span class="function"><span class="keyword">function</span>(<span class="params">file</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> img_src = <span class="built_in">window</span>.URL.createObjectURL(file)</div><div class="line">    $(<span class="string">'.preview-img'</span>)[<span class="number">0</span>].src = img_src</div><div class="line">&#125;</div><div class="line"></div><div class="line">bind_evetns()</div></pre></td></tr></table></figure>
+<p>参考链接：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="external">FormData</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects" target="_blank" rel="external">FormData 对象的使用</a></p>
 
       
     </div>
@@ -423,6 +415,10 @@
           
             <a href="/tags/Javascript/" rel="tag"># Javascript</a>
           
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+          
+            <a href="/tags/AJAX/" rel="tag"># AJAX</a>
+          
         </div>
       
 
@@ -434,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/20/javascript-jquery-api/" rel="next" title="Javascript 实现 jQuery API">
-                <i class="fa fa-chevron-left"></i> Javascript 实现 jQuery API
+              <a href="/2017/07/08/javascript-array-flatten/" rel="next" title="Javascript 拍平数组的 N 种方法">
+                <i class="fa fa-chevron-left"></i> Javascript 拍平数组的 N 种方法
               </a>
             
           </div>
@@ -443,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/20/javascript-jquery/" rel="prev" title="原生 Javascript 与 jQuery API 对照">
-                原生 Javascript 与 jQuery API 对照 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#踩坑记录"><span class="nav-number">1.</span> <span class="nav-text">踩坑记录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#form-表单上传"><span class="nav-number">1.</span> <span class="nav-text">form 表单上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX-上传"><span class="nav-number">2.</span> <span class="nav-text">AJAX 上传</span></a></li></ol></div>
             
 
           </div>
