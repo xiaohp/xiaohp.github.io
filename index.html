@@ -1027,7 +1027,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/javascript-tools/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/javascript-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -1049,8 +1049,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/16/javascript-tools/" itemprop="url">
-                  Javascript 常用函数封装
+                <a class="post-title-link" href="/2017/03/16/javascript-notes/" itemprop="url">
+                  Javascript 踩坑笔记
                 </a>
               
             
@@ -1188,7 +1188,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/20/javascript-jquery-api/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/20/javascript-tools/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -1210,8 +1210,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/02/20/javascript-jquery-api/" itemprop="url">
-                  Javascript 实现 jQuery API
+                <a class="post-title-link" href="/2017/02/20/javascript-tools/" itemprop="url">
+                  Javascript 工具函数封装
                 </a>
               
             
@@ -1287,16 +1287,18 @@
       
         
           
-            <p>选择器封装，类似 jQuery 中的 $</p>
+            <p>自定义 <code>log</code> 函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// var log = console.log.bind(console)</span></div></pre></td></tr></table></figure>
+<p>选择器封装，类似 jQuery 中的 $</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> es = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>查找 element 的所有子元素</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> find = <span class="function"><span class="keyword">function</span>(<span class="params">element, selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> element.querySelector(selector)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> find = <span class="function"><span class="keyword">function</span>(<span class="params">element, selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> element.querySelector(selector)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 在原生对象上部署此方法</span></div><div class="line"><span class="comment">// Element.prototype.find = Element.prototype.querySelector</span></div></pre></td></tr></table></figure>
 <p>添加 HTML 到指定元素后面</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> appendHtml = <span class="function"><span class="keyword">function</span>(<span class="params">element, html</span>) </span>&#123;</div><div class="line">	element.insertAdjacentHTML(<span class="string">'beforeend'</span>, html)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>添加 HTML 到指定元素开头</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> prependHtml = <span class="function"><span class="keyword">function</span>(<span class="params">element, html</span>) </span>&#123;</div><div class="line">	element.insertAdjacentHTML(<span class="string">'afterbegin'</span>, html)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>绑定事件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bindEvent = <span class="function"><span class="keyword">function</span>(<span class="params">element, eventName, callback</span>) </span>&#123;</div><div class="line">    element.addEventListener(eventName, callback)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bindEvent = <span class="function"><span class="keyword">function</span>(<span class="params">element, eventName, callback</span>) </span>&#123;</div><div class="line">    element.addEventListener(eventName, callback)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 在原生对象上部署此方法</span></div><div class="line"><span class="comment">// Element.prototype.on = Element.prototype.addEventListener</span></div></pre></td></tr></table></figure>
 <p>给多个元素绑定事件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bindAll = <span class="function"><span class="keyword">function</span>(<span class="params">selector, eventName, callback</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> elements = <span class="built_in">document</span>.querySelectorAll(selector)</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elements.length; i++) &#123;</div><div class="line">        <span class="keyword">var</span> e = elements[i]</div><div class="line">        bindEvent(e, eventName, callback)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>添加 class</p>
