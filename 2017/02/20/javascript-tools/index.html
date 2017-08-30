@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 123456var e = function(selector) &amp;#123;    return">
+<meta name="description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 1234567var e = function(selector) &amp;#123;    return">
 <meta name="keywords" content="Javascript,jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript 工具函数封装">
 <meta property="og:url" content="http://yoursite.com/2017/02/20/javascript-tools/index.html">
 <meta property="og:site_name" content="肖海平的博客">
-<meta property="og:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 123456var e = function(selector) &amp;#123;    return">
-<meta property="og:updated_time" content="2017-08-10T15:30:44.000Z">
+<meta property="og:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 1234567var e = function(selector) &amp;#123;    return">
+<meta property="og:updated_time" content="2017-08-30T12:49:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 工具函数封装">
-<meta name="twitter:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 123456var e = function(selector) &amp;#123;    return">
+<meta name="twitter:description" content="自定义 log 函数 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 选择器封装，类似 jQuery 中的 $ 1234567var e = function(selector) &amp;#123;    return">
 
 
 
@@ -357,7 +357,7 @@
         <p>自定义 <code>log</code> 函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// var log = console.log.bind(console)</span></div></pre></td></tr></table></figure>
 <p>选择器封装，类似 jQuery 中的 $</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> es = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> es = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>查找 element 的所有子元素</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> find = <span class="function"><span class="keyword">function</span>(<span class="params">element, selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> element.querySelector(selector)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 在原生对象上部署此方法</span></div><div class="line"><span class="comment">// Element.prototype.find = Element.prototype.querySelector</span></div></pre></td></tr></table></figure>
