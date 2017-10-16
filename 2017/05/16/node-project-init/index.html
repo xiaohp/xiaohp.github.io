@@ -355,14 +355,14 @@
 
       
         <p>新建一个目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> mkdir app-demo</div><div class="line"><span class="meta">$</span> cd app-demo</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> mkdir app-demo</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> app-demo</span></div></pre></td></tr></table></figure>
 <p>运行初始化命令，会在该目录下，新建一个<code>package.json</code>文件。<br>添加 <code>-y</code> 意味着文件使用默认配置，不添加会在终端问多个问题。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm init -y</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm init -y</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>添加依赖</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp --save</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install gulp --save</span></div></pre></td></tr></table></figure>
 <p>会在项目中添加依赖并放在<code>node_modules</code>文件夹中，上传到代码仓库时需要将此文件添加到 <code>ignore</code><br>使用者运行前安装依赖即可</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install</span></div></pre></td></tr></table></figure>
 <p>常用操作可以放在<code>package.json</code>文件中：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"dev"</span>: <span class="string">"node app.js"</span>,</div><div class="line">    <span class="comment">// 'build': ...,</span></div><div class="line">    <span class="comment">// 'lint': ...,</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在终端中通过以下命令运行，相当于 <code>node app.js</code> 的快捷方式。</p>
