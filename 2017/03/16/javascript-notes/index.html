@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/16/javascript-notes/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="自定义 log 函数，可以方便的进行调试 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 利用 typeof 来检查一个没有声明的变量，而不报错。 12345678910// 错误的写法if (v) &amp;#123;">
-<meta property="og:updated_time" content="2017-08-30T12:49:42.000Z">
+<meta property="og:updated_time" content="2017-10-19T07:15:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 踩坑笔记">
 <meta name="twitter:description" content="自定义 log 函数，可以方便的进行调试 12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console) 利用 typeof 来检查一个没有声明的变量，而不报错。 12345678910// 错误的写法if (v) &amp;#123;">
@@ -374,6 +374,10 @@
 <p><code>window.open</code> 打开的窗口被浏览器后屏蔽的解决方案</p>
 <p>在 <code>AJAX</code> 之前调用 <code>window.open</code> 并保存该窗口<br>在回调函数中设置该窗口的 <code>location</code> 属性</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newWindow = <span class="built_in">window</span>.open()</div><div class="line">newWindow.location = url</div></pre></td></tr></table></figure>
+<p>jQuery AJAX 序列化表单添加参数<br>当 AJAX 请求头中的 <code>Content-Type</code> 字段设置为 <code>application/x-www-form-urlencoded; charset=utf-8</code>时，可以通过</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#frm"</span>).serialize()</div></pre></td></tr></table></figure>
+<p>的方式序列化数据，传入 AJAX 进行提交。<br>这种方法的缺点在于只能提交简单数据，如包含数组则无法直接使用。<br>如果需要添加数组数据，需要额外添加：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = $(<span class="string">"#frm"</span>).serialize()</div><div class="line"><span class="keyword">var</span> other_data = &#123;</div><div class="line">    <span class="attr">num_iid</span>: item_array,</div><div class="line">    <span class="attr">wireless_index_num_iid</span>: wireless_index_num_iid,</div><div class="line">&#125;</div><div class="line">data = data + <span class="string">'&amp;'</span> + <span class="built_in">decodeURIComponent</span>($.param(other_data))</div></pre></td></tr></table></figure>
 <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol>
 <li>Array.prototype.includes() 在360浏览器中不兼容，查询后需要47以上版本的chrome才支持。<code>String</code> 和 <code>Array</code>的<code>includes</code>方法，是 ES6 加入的内容。</li>
 <li>通过代码添加的自定义 data 不会在开发者工具中显示</li>
