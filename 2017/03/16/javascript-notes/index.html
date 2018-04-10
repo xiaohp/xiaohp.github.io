@@ -110,7 +110,7 @@
 <meta property="og:url" content="http://xiaohaiping.cc/2017/03/16/javascript-notes/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="自定义 log 函数，可以方便的进行调试12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console, &apos;debug --&apos;) 利用 typeof 来检查一个没有声明的变量，而不报错。12345678910// 错误的写法if">
-<meta property="og:updated_time" content="2018-04-08T11:11:51.166Z">
+<meta property="og:updated_time" content="2018-04-10T12:08:02.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 踩坑笔记">
 <meta name="twitter:description" content="自定义 log 函数，可以方便的进行调试12345var log = function() &amp;#123;    console.log.apply(console, arguments)&amp;#125;// var log = console.log.bind(console, &apos;debug --&apos;) 利用 typeof 来检查一个没有声明的变量，而不报错。12345678910// 错误的写法if">
@@ -217,7 +217,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
         </li>
       
         
@@ -229,13 +229,13 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Kategorien</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
         </li>
       
 
@@ -311,7 +311,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T14:10:29+08:00">2017-03-16</time>
             
@@ -331,7 +331,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记本/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a></span>
@@ -390,7 +390,7 @@
 <h2 id="利用-JSON-深度复制对象"><a href="#利用-JSON-深度复制对象" class="headerlink" title="利用 JSON 深度复制对象"></a>利用 <code>JSON</code> 深度复制对象</h2><p>对象和数组为引用类型，不能直接赋值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> copyObject = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="设置-iframe-内容为指定-HTML-字符串"><a href="#设置-iframe-内容为指定-HTML-字符串" class="headerlink" title="设置 iframe 内容为指定 HTML 字符串"></a>设置 <code>iframe</code> 内容为指定 <code>HTML</code> 字符串</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> iframe = <span class="built_in">document</span>.querySelector(<span class="string">'#iframe'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 此方法为叠加的方式，若需要刷新，则需要在之前设置 src 为空</span></div><div class="line">iframe.src = <span class="string">"about:blank"</span></div><div class="line">iframe.contentWindow.document.write(data.html)</div><div class="line"><span class="comment">// jQuery 修改 iframe 内部样式</span></div><div class="line">$(iframe).contents().find(<span class="string">'body'</span>).css(<span class="string">'zoom'</span>, <span class="string">'0.5'</span>)</div><div class="line"><span class="comment">// 设置完内容需要关闭，否则一直在 loading</span></div><div class="line">iframe.contentWindow.document.close()</div></pre></td></tr></table></figure>
-<h2 id="window-open-打开的窗口被浏览器后屏蔽的解决方案"><a href="#window-open-打开的窗口被浏览器后屏蔽的解决方案" class="headerlink" title="window.open 打开的窗口被浏览器后屏蔽的解决方案"></a><code>window.open</code> 打开的窗口被浏览器后屏蔽的解决方案</h2><p>在 <code>AJAX</code> 之前调用 <code>window.open</code> 并保存该窗口<br>在回调函数中设置该窗口的 <code>location</code> 属性</p>
+<h2 id="window-open-打开的窗口被浏览器后屏蔽的解决方案"><a href="#window-open-打开的窗口被浏览器后屏蔽的解决方案" class="headerlink" title="window.open 打开的窗口被浏览器后屏蔽的解决方案"></a><code>window.open</code> 打开的窗口被浏览器后屏蔽的解决方案</h2><p>在 <code>AJAX</code> 之前调用 <code>window.open</code> 并保存该窗口<br>在回调函数中设置该窗口的 <code>location</code> 属性<br>如果用户浏览器开启了拦截，则用户点击页面后，1s内打开新窗口有效，1s后会被拦截。所以需要在 ajax 之前打开窗口</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newWindow = <span class="built_in">window</span>.open()</div><div class="line">newWindow.location = url</div></pre></td></tr></table></figure>
 <h2 id="jQuery-AJAX-序列化表单添加参数"><a href="#jQuery-AJAX-序列化表单添加参数" class="headerlink" title="jQuery AJAX 序列化表单添加参数"></a>jQuery AJAX 序列化表单添加参数</h2><p>当 AJAX 请求头中的 <code>Content-Type</code> 字段设置为 <code>application/x-www-form-urlencoded; charset=utf-8</code>时，可以通过</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#form"</span>).serialize()</div></pre></td></tr></table></figure>
@@ -552,10 +552,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -580,7 +580,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">16</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -591,7 +591,7 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">categories</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
               
@@ -602,7 +602,7 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     <span class="site-state-item-count">15</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">Tags</span>
                   </a>
                 </div>
               
@@ -699,7 +699,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
