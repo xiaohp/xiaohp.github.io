@@ -110,6 +110,7 @@
 <meta property="og:url" content="http://xiaohaiping.cc/2018/06/18/linux-cli/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-06-18T16:05:20.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令行笔记">
@@ -380,19 +381,19 @@
 
       
         <h2 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h2><p><code>pwd</code> print working directory 输出当前所在位置<br><code>cd</code> change directory 改变工作目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> Desktop</div><div class="line"><span class="built_in">cd</span> /etc</div><div class="line"><span class="built_in">cd</span> ../git</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Desktop</span><br><span class="line"><span class="built_in">cd</span> /etc</span><br><span class="line"><span class="built_in">cd</span> ../git</span><br></pre></td></tr></table></figure>
 <p><code>ls</code> list 列出目录内容<br>选项 <code>a</code> 表示 all, 会列出包含隐藏文件<br>选项 <code>l</code> 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等</p>
 <a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls -a</div><div class="line">ls -l</div><div class="line">ls -la</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br><span class="line">ls -l</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure>
 <p><code>mkdir</code> make directories 创建新目录<br><code>touch</code> 创建一个空白文件<br><code>mv</code> move 移动文件和重命名文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 如果 b 目录已经存在, 移动文件</span></div><div class="line">mv a.txt b</div><div class="line"><span class="comment"># 重命名文件夹</span></div><div class="line">mv hosts hosts_bak</div><div class="line"><span class="comment"># 移动到临时文件目录的方式来删除文件</span></div><div class="line">mv a.txt /tmp</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果 b 目录已经存在, 移动文件</span></span><br><span class="line">mv a.txt b</span><br><span class="line"><span class="comment"># 重命名文件夹</span></span><br><span class="line">mv hosts hosts_bak</span><br><span class="line"><span class="comment"># 移动到临时文件目录的方式来删除文件</span></span><br><span class="line">mv a.txt /tmp</span><br></pre></td></tr></table></figure>
 <p><code>cp</code> copy 复制指定的文件与目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将 a.txt 复制到 b 目录</span></div><div class="line">cp a.txt b</div><div class="line"><span class="comment"># 复制目录及其子目录和文件, 使用 -R 选项</span></div><div class="line">cp -R b c</div></pre></td></tr></table></figure>
-<p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="external">bat</a> 输出带语法高亮的内容<br><code>tail</code> 输出文件里的最后一小部分内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 a.txt 复制到 b 目录</span></span><br><span class="line">cp a.txt b</span><br><span class="line"><span class="comment"># 复制目录及其子目录和文件, 使用 -R 选项</span></span><br><span class="line">cp -R b c</span><br></pre></td></tr></table></figure>
+<p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener">bat</a> 输出带语法高亮的内容<br><code>tail</code> 输出文件里的最后一小部分内容</p>
 <h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>~<br>波浪号, 表示用户主目录, 如果当前是 root 用户, 则执行 <code>cd ~</code> 会进入<code>/Users/root</code> 目录<br>/<br>斜杠, 表示根目录<br>.<br>一个点, 表示当前目录<br>..<br>两个点, 表示上一级目录</p>
-<h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi README.md</div></pre></td></tr></table></figure>
+<h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi README.md</span><br></pre></td></tr></table></figure>
 <p>按小写 <code>i</code> 进入 vi 的编辑模式;<br>按 <code>esc</code> 退出编辑模式;<br>按 <code>/</code> 搜索文件内容,输入要搜索的关键词, <code>n</code> 继续查找, <code>N</code> 往前查找<br>保存并退出 <code>:wq</code><br>不保存退出 <code>:q!</code></p>
-<h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="https://explainshell.com/" target="_blank" rel="external">explainshell.com</a> 这个网站可以查询命令的参数</p>
+<h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="https://explainshell.com/" target="_blank" rel="noopener">explainshell.com</a> 这个网站可以查询命令的参数</p>
 
       
     </div>

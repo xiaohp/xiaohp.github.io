@@ -109,6 +109,7 @@
 <meta property="og:url" content="http://xiaohaiping.cc/page/2/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="但行好事，莫问前程。">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="肖海平的博客">
 <meta name="twitter:description" content="但行好事，莫问前程。">
@@ -381,8 +382,8 @@
 
       
         
-          <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>通用选择<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'selector'</span>)</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'selector'</span>)</div><div class="line"></div><div class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'selector'</span>)</div><div class="line"><span class="comment">// return NodeList</span></div></pre></td></tr></table></figure></p>
-<p>后代选择<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$el.find(<span class="string">'li'</span>)</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line">el.querySelectorAll(<span class="string">'li'</span>)</div></pre></td></tr></table></figure></p>
+          <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>通用选择<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$(<span class="string">'selector'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Native</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'selector'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'selector'</span>)</span><br><span class="line"><span class="comment">// return NodeList</span></span><br></pre></td></tr></table></figure></p>
+<p>后代选择<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$el.find(<span class="string">'li'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Native</span></span><br><span class="line">el.querySelectorAll(<span class="string">'li'</span>)</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/20/javascript-jquery/#more" rel="contents">
@@ -536,8 +537,8 @@
 
       
         
-          <h2 id="自定义-log-函数，可以方便的进行调试"><a href="#自定义-log-函数，可以方便的进行调试" class="headerlink" title="自定义 log 函数，可以方便的进行调试"></a>自定义 <code>log</code> 函数，可以方便的进行调试</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// var log = console.log.bind(console, 'debug --')</span></div></pre></td></tr></table></figure>
-<h2 id="利用-typeof-来检查一个没有声明的变量，而不报错。"><a href="#利用-typeof-来检查一个没有声明的变量，而不报错。" class="headerlink" title="利用 typeof 来检查一个没有声明的变量，而不报错。"></a>利用 <code>typeof</code> 来检查一个没有声明的变量，而不报错。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 错误的写法</span></div><div class="line"><span class="keyword">if</span> (v) &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// ReferenceError: v is not defined</span></div><div class="line"></div><div class="line"><span class="comment">// 正确的写法</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> v === <span class="string">'undefined'</span>) &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <h2 id="自定义-log-函数，可以方便的进行调试"><a href="#自定义-log-函数，可以方便的进行调试" class="headerlink" title="自定义 log 函数，可以方便的进行调试"></a>自定义 <code>log</code> 函数，可以方便的进行调试</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// var log = console.log.bind(console, 'debug --')</span></span><br></pre></td></tr></table></figure>
+<h2 id="利用-typeof-来检查一个没有声明的变量，而不报错。"><a href="#利用-typeof-来检查一个没有声明的变量，而不报错。" class="headerlink" title="利用 typeof 来检查一个没有声明的变量，而不报错。"></a>利用 <code>typeof</code> 来检查一个没有声明的变量，而不报错。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 错误的写法</span></span><br><span class="line"><span class="keyword">if</span> (v) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ReferenceError: v is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的写法</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> v === <span class="string">'undefined'</span>) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/16/javascript-notes/#more" rel="contents">
@@ -692,9 +693,9 @@
       
         
           <p>自定义 <code>log</code> 函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// var log = console.log.bind(console)</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log.apply(<span class="built_in">console</span>, <span class="built_in">arguments</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// var log = console.log.bind(console)</span></span><br></pre></td></tr></table></figure>
 <p>选择器封装，类似 jQuery 中的 $</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> es = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> e = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(selector)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> es = <span class="function"><span class="keyword">function</span>(<span class="params">selector</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(selector)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/02/20/javascript-tools/#more" rel="contents">
@@ -1004,11 +1005,11 @@
 
       
         
-          <p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a></p>
-<h3 id="添加新文章"><a href="#添加新文章" class="headerlink" title="添加新文章"></a>添加新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="开启服务器"><a href="#开启服务器" class="headerlink" title="开启服务器"></a>开启服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>默认端口4000，如果打不开可能端口冲突（比如在我的电脑上这个端口被福昕阅读器占用），可手动指定其他端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 5000</div></pre></td></tr></table></figure></p>
+          <p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a></p>
+<h3 id="添加新文章"><a href="#添加新文章" class="headerlink" title="添加新文章"></a>添加新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="开启服务器"><a href="#开启服务器" class="headerlink" title="开启服务器"></a>开启服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>默认端口4000，如果打不开可能端口冲突（比如在我的电脑上这个端口被福昕阅读器占用），可手动指定其他端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/01/05/hexo-note/#more" rel="contents">
@@ -1164,23 +1165,23 @@
         
           <h2 id="工具网站："><a href="#工具网站：" class="headerlink" title="工具网站："></a>工具网站：</h2><p>综合：</p>
 <ol>
-<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">MDN</a></li>
-<li><a href="http://www.w3schools.com/" target="_blank" rel="external">W3Schools</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></li>
+<li><a href="http://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
 </ol>
 <p>查询兼容性：</p>
 <ol>
-<li><a href="http://caniuse.com/" target="_blank" rel="external">Can i use</a></li>
+<li><a href="http://caniuse.com/" target="_blank" rel="noopener">Can i use</a></li>
 </ol>
 <p>动画：</p>
 <ol>
-<li><a href="https://daneden.github.io/animate.css/" target="_blank" rel="external">Animate.css</a></li>
-<li><a href="http://cssanimate.com/" target="_blank" rel="external">cssanimate</a></li>
+<li><a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">Animate.css</a></li>
+<li><a href="http://cssanimate.com/" target="_blank" rel="noopener">cssanimate</a></li>
 </ol>
 <p>CSS3 generator:</p>
 <ol>
-<li><a href="http://www.css3generator.in/" target="_blank" rel="external">http://www.css3generator.in/</a></li>
-<li><a href="http://css3generator.com/" target="_blank" rel="external">http://css3generator.com/</a></li>
-<li><a href="http://css3.me/" target="_blank" rel="external">http://css3.me/</a></li>
+<li><a href="http://www.css3generator.in/" target="_blank" rel="noopener">http://www.css3generator.in/</a></li>
+<li><a href="http://css3generator.com/" target="_blank" rel="noopener">http://css3generator.com/</a></li>
+<li><a href="http://css3.me/" target="_blank" rel="noopener">http://css3.me/</a></li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1634,10 +1635,10 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/05/16/hello-world/#more" rel="contents">
