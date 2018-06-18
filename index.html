@@ -381,22 +381,16 @@
 
       
         
-          
-            <h2 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h2><p><code>pwd</code> print working directory 输出当前所在位置<br><code>cd</code> change directory 改变工作目录</p>
+          <h2 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h2><p><code>pwd</code> print working directory 输出当前所在位置<br><code>cd</code> change directory 改变工作目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> Desktop</div><div class="line"><span class="built_in">cd</span> /etc</div><div class="line"><span class="built_in">cd</span> ../git</div></pre></td></tr></table></figure>
 <p><code>ls</code> list 列出目录内容<br>选项 <code>a</code> 表示 all, 会列出包含隐藏文件<br>选项 <code>l</code> 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls -a</div><div class="line">ls -l</div><div class="line">ls -la</div></pre></td></tr></table></figure>
-<p><code>mkdir</code> make directories 创建新目录<br><code>touch</code> 创建一个空白文件<br><code>mv</code> move 移动文件和重命名文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 如果 b 目录已经存在, 移动文件</span></div><div class="line">mv a.txt b</div><div class="line"><span class="comment"># 重命名文件夹</span></div><div class="line">mv hosts hosts_bak</div><div class="line"><span class="comment"># 移动到临时文件目录的方式来删除文件</span></div><div class="line">mv a.txt /tmp</div></pre></td></tr></table></figure>
-<p><code>cp</code> copy 复制指定的文件与目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将 a.txt 复制到 b 目录</span></div><div class="line">cp a.txt b</div><div class="line"><span class="comment"># 复制目录及其子目录和文件, 使用 -R 选项</span></div><div class="line">cp -R b c</div></pre></td></tr></table></figure>
-<p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="external">bat</a> 输出带语法高亮的内容<br><code>tail</code> 输出文件里的最后一小部分内容</p>
-<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>~<br>波浪号, 表示用户主目录, 如果当前是 root 用户, 则执行 <code>cd ~</code> 会进入<code>/Users/root</code> 目录<br>/<br>斜杠, 表示根目录<br>.<br>一个点, 表示当前目录<br>..<br>两个点, 表示上一级目录</p>
-<h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi README.md</div></pre></td></tr></table></figure>
-<p>按小写 <code>i</code> 进入 vi 的编辑模式;<br>按 <code>esc</code> 退出编辑模式;<br>按 <code>/</code> 搜索文件内容,输入要搜索的关键词, <code>n</code> 继续查找, <code>N</code> 往前查找<br>保存并退出 <code>:wq</code><br>不保存退出 <code>:q!</code></p>
-<h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="https://explainshell.com/" target="_blank" rel="external">explainshell.com</a> 这个网站可以查询命令的参数</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/18/linux-cli/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -445,7 +439,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/04/12/mac-iterm2/">
+    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/04/15/mac-iterm2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -464,7 +458,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/12/mac-iterm2/" itemprop="url">macOS iTerm2 配置备忘</a></h2>
+                <a class="post-title-link" href="/2018/04/15/mac-iterm2/" itemprop="url">macOS iTerm2 配置备忘</a></h2>
         
 
         <div class="post-meta">
@@ -476,7 +470,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T16:40:29+08:00">2018-04-12</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T16:40:29+08:00">2018-04-15</time>
             
 
             
@@ -512,9 +506,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/12/mac-iterm2/#comments" itemprop="discussionUrl">
+                <a href="/2018/04/15/mac-iterm2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/12/mac-iterm2/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/04/15/mac-iterm2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -543,24 +537,18 @@
 
       
         
-          
-            <h2 id="下载安装-iTerm2"><a href="#下载安装-iTerm2" class="headerlink" title="下载安装 iTerm2"></a>下载安装 iTerm2</h2><p>方案一, 在<a href="https://www.iterm2.com/" target="_blank" rel="external">iTerm2 官网</a> 下载安装</p>
+          <p>最近在新电脑上配置了 macOS 的开发环境，记录一下 <code>iTerm2</code> 的配置过程。</p>
+<h2 id="下载安装-iTerm2"><a href="#下载安装-iTerm2" class="headerlink" title="下载安装 iTerm2"></a>下载安装 iTerm2</h2><p>方案一, 在<a href="https://www.iterm2.com/" target="_blank" rel="external">iTerm2 官网</a> 下载安装</p>
 <p>方案二, 使用 homebrew 进行安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install iterm2</div></pre></td></tr></table></figure>
 <h2 id="设置-zsh-与-oh-my-zsh"><a href="#设置-zsh-与-oh-my-zsh" class="headerlink" title="设置 zsh 与 oh-my-zsh"></a>设置 zsh 与 oh-my-zsh</h2><h3 id="修改-shell-为-zsh"><a href="#修改-shell-为-zsh" class="headerlink" title="修改 shell 为 zsh"></a>修改 <code>shell</code> 为 <code>zsh</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh -s /bin/zs</div></pre></td></tr></table></figure>
-<h3 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 <code>oh-my-zsh</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/</div><div class="line">git <span class="built_in">clone</span> git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</div><div class="line">cp ~/.zshrc ~/.zshrc.orig</div><div class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</div></pre></td></tr></table></figure>
-<h3 id="修改-theme"><a href="#修改-theme" class="headerlink" title="修改 theme"></a>修改 theme</h3><p>打开配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">atom .zshrc</div></pre></td></tr></table></figure>
-<p>把里面的主题设置 <code>ZSH_THEME=&quot;robbyrussell&quot;</code> 修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#ZSH_THEME=&quot;robbyrussell&quot;</div><div class="line">ZSH_THEME=&quot;agnoster&quot;</div></pre></td></tr></table></figure>
-<p>即注释之前的内容, 修改主题.</p>
-<h3 id="修改-agnoster-的-theme-source-code"><a href="#修改-agnoster-的-theme-source-code" class="headerlink" title="修改 agnoster 的 theme source code"></a>修改 agnoster 的 theme source code</h3><p>在终端输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">atom ~/.oh-my-zsh/themes/agnoster.zsh-theme</div></pre></td></tr></table></figure>
-<p>Atom 会打开 <code>agnoster.zsh-theme</code> 这个文件, 把这个文件的内容替换为 <a href="https://gist.github.com/agnoster/3712874/raw/c3107c06c04fb42b0ca27b0a81b15854819969c6/agnoster.zsh-theme" target="_blank" rel="external">这个链接</a> 里面的内容.保存后关闭 Atom.</p>
-<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>在 <a href="https://gist.github.com/qrush/1595572" target="_blank" rel="external">这里</a> 点击 <code>Download ZIP</code> 下载字体文件.解压后安装.</p>
-<h2 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h2><p>点击下载 <a href="http://ethanschoonover.com/solarized/files/solarized.zip" target="_blank" rel="external">solarized</a> 并解压缩<br>打开 iTerm2 的 <code>Preferences</code> 设置<br>更换背景<br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/1740122.jpg" alt=""><br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/30339310.jpg" alt=""><br>更换字体<br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/98871498.jpg" alt=""><br>按 <code>command + q</code> 退出再打开.可看到如下效果即设置完成.<br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/34191125.jpg" alt=""></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/15/mac-iterm2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -661,7 +649,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记本/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
 
                 
                 
@@ -707,29 +695,15 @@
 
       
         
-          
-            <p><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/67241270.jpg" alt=""></p>
+          <p><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-18/67241270.jpg" alt=""></p>
 <h2 id="全书概览"><a href="#全书概览" class="headerlink" title="全书概览"></a>全书概览</h2><p>这本书其实讲的不是心理学，而是科学方法论，通过说明科学研究的过程来介绍科学。而心理学正是采用了同样的方法来研究对象，所以心理学和其他我们熟知的学科在研究方法上并无二致。</p>
-<h2 id="大众对心理学的认识"><a href="#大众对心理学的认识" class="headerlink" title="大众对心理学的认识"></a>大众对心理学的认识</h2><p>在大街上采访大众对于作出大贡献的心理学家的名字，排在第一位的就是弗洛伊德。弗洛伊德的名气太大，极大的影响了普通公众对心理学的理解，同时也造就了许多认识上的误区。对美国心理学会会员中所有认同弗洛伊德精神分析的人数进行统计，就会发现人数不到总人数的10%。有一本受欢迎的心理学入门教科书《心理学的邀请》，在超过700页的篇幅中，只有15页提到了弗洛伊德或精神分析学派，而且内容大都是对其进行批判。（大多数弗洛伊德的观点都曾经并且现在依旧被大多数实证取向的心理学学家排斥。P19）。这就是弗洛伊德问题，大众认识到的心理学，和目前实际发展的心理学相去甚远。</p>
-<h3 id="如何解决这个问题："><a href="#如何解决这个问题：" class="headerlink" title="如何解决这个问题："></a>如何解决这个问题：</h3><p>展示心理学的多样性，美国心理学会有50多个分支机构，弗洛伊德的相关的内容只占很小的部分。<br>用科学的方法寻求对行为的理解。<br>本书主要说明第二点。</p>
-<h2 id="科学方法"><a href="#科学方法" class="headerlink" title="科学方法"></a>科学方法</h2><ol>
-<li><p>系统的实证主义研究方法<br>基于观察的实践，科学家通过验证来寻找世界的规律。</p>
-</li>
-<li><p>以可公开检验的知识为研究对象<br>可重复性和同行评审。<br>科学通过可重复性来实现公共可检验的理念。一项发现如果想在科学家获得公认，就必须以让其他科学家尝试相同的实验并获取相同结果。<br>同行评审是指每一篇投到研究性期刊的文章都要经过数位科学家的评审，确定这篇文章是否可以立即发表，还是需要进一步的实验研究和统计分析之后再发表，或是因为有缺陷或价值太低而拒绝接受。<br>并非所有经过同行评审的科学期刊中的信息都必然正确，但至少已经满足了同行批评和监督的标准。同行评审是一个最低标准，不是严格的标准。</p>
-</li>
-<li><p>研究实证可解的问题<br>科学针对的是可解决的，明确具体的问题。科学家们所致力解决的问题是能通过对现有的经验技术获得答案的。比如“人性本善还是本恶”，“生命的意义是什么”就不是可实证的问题，因此不属于科学领域。<br>科学通过以下方式得以进步：提出理论解释特定现象，根据理论作出预测，实证性检验假设，基于检验结果对理论进行修正。<br>理论——预测——检验——修正。</p>
-</li>
-</ol>
-<h2 id="可证伪性"><a href="#可证伪性" class="headerlink" title="可证伪性"></a>可证伪性</h2><p>案例：黄热病<br>1793年，黄热病袭击了费城。当时有一位顶尖的医生叫本杰明，是《独立宣言》的签署人之一。本杰明认为采用大量放血的方法治疗。随着疾病的流行他对这个方法更加自信了，虽然曾有几个病人死去。这是因为他将每个好转的病例都归为治疗方法的功效，而将每个死亡的病例都归为病入膏肓。</p>
-<p>正常的逻辑是，病人若恢复说明治疗方法有效，病人若死亡说明治疗方法有问题。事实上，他将这种否定合理化，违法了检验科学理论的重要原则：他令自己的理论不能被证伪。<br>定义：对某理论的新证据进行评价，必须是新的数据具有证伪该理论的可能性。</p>
-<p>可证伪性标准主张，一项理论如果有用，它所作出的预测必须是明确的，理论必须两面兼顾，也就是说，这项理论在告诉我们那些事情会发生的同时，应该指出哪些事情不会发生。如果不会发生的事情确实发生了，我们就得到一个明确的信号——这项理论有问题：它可能需要修正，或者我们需要去寻找一个全新的理论。不管哪种方式，我们将最终拥有一个更接近真理的理论。</p>
-<h2 id="相关和因果"><a href="#相关和因果" class="headerlink" title="相关和因果"></a>相关和因果</h2><p>案例：用“烤箱法” 避孕<br>多年前台湾开展过一次研究，目的是调查哪些因素是与人们对避孕工具的使用相关的。研究团队搜集了有关环境和行为变量方面的大量数据。然后发现，有一个变量和使用避孕工具的相关最强，就是家庭中电器（烤箱、风扇等）的数量。看到这里例子，我们应该不会认为：在高中发放免费的烤箱以解决青少年的怀孕问题。可以猜想，这种关系之所以存在，是因为两个变量与其他变量联系起来，社会经济地位可能是其中一个。</p>
-<p>结论：有相关，并不意味着必然有因果关系。</p>
-<h2 id="实验过程中的控制"><a href="#实验过程中的控制" class="headerlink" title="实验过程中的控制"></a>实验过程中的控制</h2><p>案例：斯诺与霍乱<br>19实际50年代的伦敦，人们对彼此爆发的霍乱提出了许多理论。很多医生认为霍乱病人呼出的气体会将次疾病传染给别人，称之为“秽气理论”。但斯诺却指出，该疾病是通过被病人排泄物污染的供水系统传播出去的。<br>斯诺开始着手验证它的理论。当时伦敦有许多不同的供水源，分别给不同地区供水，所以不同供水系统受感染的程度不同，霍乱的发生率应该因供水源的受污染程度不同而存在差别。但是这种比较会出现严重的偏差。不同地区的经济发展水平也不同，如饮食、压力、工作危机和生活质量等也都不一样。简单来说就是获得虚假相关的可能性很大。但是斯诺注意到了一种已经出现过的特殊条件，并利用这一点来解决问题。<br>在伦敦的一个市区，碰巧有两家自来水公司对同一个社区供水，但从供水布局上来说是杂乱无章的。在某条街道上，一个部分房子由A公司供水，一部分是由B公司供水。原因是两家公司早期存在竞争。因此斯诺找到了这些家庭，其经济地位基本相同。<br>在一波霍乱流行后A公司为了避免水污染，将公司迁到泰晤士河上游，而B公司仍然在下游。A公司的水系统受污染的可能性比B公司要小得多。斯诺通过化学实验也证明了这一点。剩下的工作就是统计两个公司供水的家庭的霍乱发病率。A公司供水的每10000个家庭里有37人死亡，B公司则是315人。</p>
-<p>实验设计的目的是分离变量，当成功分离出一个变量，结果就能排除大量之前提出作为解释的其他理论。</p>
-<h2 id="书中推荐的阅读材料："><a href="#书中推荐的阅读材料：" class="headerlink" title="书中推荐的阅读材料："></a>书中推荐的阅读材料：</h2><p>《改变心理学的40项研究》</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/22/how-to-think-straight-about-psychology/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1909,7 +1883,7 @@
                 
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1920,7 +1894,7 @@
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
