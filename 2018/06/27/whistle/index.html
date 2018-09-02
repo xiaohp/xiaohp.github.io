@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-6-27/1075711.jpg">
 <meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-6-27/48036690.jpg">
 <meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-9-2/74710244.jpg">
-<meta property="og:updated_time" content="2018-09-02T05:24:59.552Z">
+<meta property="og:updated_time" content="2018-09-02T05:32:22.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 whistle 抓包调试">
 <meta name="twitter:description" content="网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档. 安装1.安装最新版 Node.js 2.安装 whistle 这里可以使用 npm 或者 tnpm 安装">
@@ -437,6 +437,7 @@
 <p>这里可以使用 npm 或者 tnpm 安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g whistle</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可能需要 sudo</span></span><br><span class="line">sudo npm install -g whistle</span><br></pre></td></tr></table></figure>
 <p>3.Chrome 浏览器安装代理插件 <a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif" target="_blank" rel="noopener">Proxy SwitchyOmega</a></p>
+<a id="more"></a>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>1.启动<br>whistle 支持三种命令 <code>whistle</code>、<code>w2</code>、<code>wproxy</code>, 效果是相同的.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认启动</span></span><br><span class="line">w2 start</span><br><span class="line"><span class="comment"># 指定端口启动</span></span><br><span class="line">w2 start -p 8080</span><br></pre></td></tr></table></figure>
 <p>2.Chrome 浏览器 Proxy SwitchyOmega 配置</p>
