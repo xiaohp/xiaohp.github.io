@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T15:45:11.643Z">
+<meta property="og:updated_time" content="2018-09-05T23:57:31.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令行笔记">
 <meta name="twitter:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
@@ -436,11 +436,24 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果 b 目录已经存在, 移动文件</span></span><br><span class="line">mv a.txt b</span><br><span class="line"><span class="comment"># 重命名文件夹</span></span><br><span class="line">mv hosts hosts_bak</span><br><span class="line"><span class="comment"># 移动到临时文件目录的方式来删除文件</span></span><br><span class="line">mv a.txt /tmp</span><br></pre></td></tr></table></figure>
 <p><code>cp</code> copy 复制指定的文件与目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 a.txt 复制到 b 目录</span></span><br><span class="line">cp a.txt b</span><br><span class="line"><span class="comment"># 复制目录及其子目录和文件, 使用 -R 选项</span></span><br><span class="line">cp -R b c</span><br></pre></td></tr></table></figure>
-<p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener">bat</a> 输出带语法高亮的内容<br><code>tail</code> 输出文件里的最后一小部分内容</p>
-<p><code>tar</code> 命令可以解压<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf node_modules.tar.gz -C /home/frontend</span><br></pre></td></tr></table></figure></p>
-<h3 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h3><p>~<br>波浪号, 表示用户主目录, 如果当前是 root 用户, 则执行 <code>cd ~</code> 会进入<code>/Users/root</code> 目录<br>/<br>斜杠, 表示根目录<br>.<br>一个点, 表示当前目录<br>..<br>两个点, 表示上一级目录</p>
-<h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi README.md</span><br></pre></td></tr></table></figure>
+<p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener">bat</a> 输出带语法高亮的内容</p>
+<p><code>tail</code> 输出文件里的最后一小部分内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail filename</span><br><span class="line">使用参数 -f 可以循环读取文件内容, 常用来查阅正在改变的日志文件</span><br><span class="line">tail -f filename</span><br></pre></td></tr></table></figure>
+<p><code>tar</code> 命令可以解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf node_modules.tar.gz -C /home/frontend</span><br></pre></td></tr></table></figure>
+<p><code>grep</code> 查找文件里符合条件的字符串</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'促销活动'</span> error_log20180717004</span><br><span class="line"><span class="comment"># 查找前缀有 error_log20180717 的文件中包含 促销活动 字符串的文件</span></span><br><span class="line">grep <span class="string">'促销活动'</span> error_log20180717*</span><br></pre></td></tr></table></figure>
+<h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><p>切换用户并进入该用户的 home 目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su - username</span><br><span class="line"><span class="comment"># 仅切换用户, 停留在当前目录</span></span><br><span class="line">sudo su username</span><br></pre></td></tr></table></figure>
+<p>root 修改普通用户密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd username</span><br></pre></td></tr></table></figure>
+<p>然后连续两次输入新的用户密码即可</p>
+<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><p><code>~</code> 波浪号, 表示用户主目录, 如果当前是 root 用户, 则执行 <code>cd ~</code> 会进入<code>/Users/root</code> 目录<br><code>/</code> 斜杠, 表示根目录<br><code>.</code> 一个点, 表示当前目录<br><code>..</code> 两个点, 表示上一级目录<br><code>&gt;</code> 重定向符号, 将命令的输出重定向到文件中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"hello"</span> &gt; a.txt</span><br></pre></td></tr></table></figure>
+<h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi README.md</span><br></pre></td></tr></table></figure>
 <p>按小写 <code>i</code> 进入 vi 的编辑模式;<br>按 <code>esc</code> 退出编辑模式;<br>按 <code>/</code> 搜索文件内容,输入要搜索的关键词, <code>n</code> 继续查找, <code>N</code> 往前查找<br>保存并退出 <code>:wq</code><br>不保存退出 <code>:q!</code></p>
+<h2 id="终端走代理"><a href="#终端走代理" class="headerlink" title="终端走代理"></a>终端走代理</h2><p>在 macOS 下, 设置系统代理后, 对普通应用有效, 但是终端需要额外设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">"http://127.0.0.1:1080"</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">"http://127.0.0.1:1080"</span></span><br><span class="line"><span class="comment"># 使用 shadowsocks</span></span><br><span class="line"><span class="built_in">export</span> ALL_PROXY=<span class="string">"socks5://127.0.0.1:1080"</span></span><br></pre></td></tr></table></figure>
 <h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="https://explainshell.com/" target="_blank" rel="noopener">explainshell.com</a> 这个网站可以查询命令的参数</p>
 
       
@@ -762,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">1.</span> <span class="nav-text">文件与目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊符号"><span class="nav-number">1.1.</span> <span class="nav-text">特殊符号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-vi-编辑文件"><span class="nav-number">2.</span> <span class="nav-text">使用 vi 编辑文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">3.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">1.</span> <span class="nav-text">文件与目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户"><span class="nav-number">2.</span> <span class="nav-text">用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊符号"><span class="nav-number">3.</span> <span class="nav-text">特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-vi-编辑文件"><span class="nav-number">4.</span> <span class="nav-text">使用 vi 编辑文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端走代理"><span class="nav-number">5.</span> <span class="nav-text">终端走代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">6.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
