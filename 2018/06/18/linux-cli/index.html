@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-05T23:57:31.052Z">
+<meta property="og:updated_time" content="2018-09-05T23:59:25.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令行笔记">
 <meta name="twitter:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
@@ -438,7 +438,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 a.txt 复制到 b 目录</span></span><br><span class="line">cp a.txt b</span><br><span class="line"><span class="comment"># 复制目录及其子目录和文件, 使用 -R 选项</span></span><br><span class="line">cp -R b c</span><br></pre></td></tr></table></figure>
 <p><code>cat</code> 输出文件内容<br>可以另外安装 <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener">bat</a> 输出带语法高亮的内容</p>
 <p><code>tail</code> 输出文件里的最后一小部分内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail filename</span><br><span class="line">使用参数 -f 可以循环读取文件内容, 常用来查阅正在改变的日志文件</span><br><span class="line">tail -f filename</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail filename</span><br><span class="line"><span class="comment"># 使用参数 -f 可以循环读取文件内容, 常用来查阅正在改变的日志文件</span></span><br><span class="line">tail -f filename</span><br></pre></td></tr></table></figure>
 <p><code>tar</code> 命令可以解压</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf node_modules.tar.gz -C /home/frontend</span><br></pre></td></tr></table></figure>
 <p><code>grep</code> 查找文件里符合条件的字符串</p>
