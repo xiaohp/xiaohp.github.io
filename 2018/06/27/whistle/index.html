@@ -116,14 +116,14 @@
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档. 安装1.安装最新版 Node.js 2.安装 whistle 这里可以使用 npm 或者 tnpm 安装">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-6-27/1075711.jpg">
-<meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-6-27/48036690.jpg">
-<meta property="og:image" content="http://oih6hf7qs.bkt.clouddn.com/18-9-2/74710244.jpg">
-<meta property="og:updated_time" content="2018-09-02T05:32:22.381Z">
+<meta property="og:image" content="http://xiaohaiping.cc/images/article/1075711.jpg">
+<meta property="og:image" content="http://xiaohaiping.cc/images/article/48036690.jpg">
+<meta property="og:image" content="http://xiaohaiping.cc/images/article/74710244.jpg">
+<meta property="og:updated_time" content="2018-10-21T14:29:57.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 whistle 抓包调试">
 <meta name="twitter:description" content="网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档. 安装1.安装最新版 Node.js 2.安装 whistle 这里可以使用 npm 或者 tnpm 安装">
-<meta name="twitter:image" content="http://oih6hf7qs.bkt.clouddn.com/18-6-27/1075711.jpg">
+<meta name="twitter:image" content="http://xiaohaiping.cc/images/article/1075711.jpg">
 
 
 
@@ -441,11 +441,11 @@
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>1.启动<br>whistle 支持三种命令 <code>whistle</code>、<code>w2</code>、<code>wproxy</code>, 效果是相同的.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认启动</span></span><br><span class="line">w2 start</span><br><span class="line"><span class="comment"># 指定端口启动</span></span><br><span class="line">w2 start -p 8080</span><br></pre></td></tr></table></figure>
 <p>2.Chrome 浏览器 Proxy SwitchyOmega 配置</p>
-<p>新建情景模式, 选择代理服务器<br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-27/1075711.jpg" alt="选择代理服务器"></p>
-<p>填写 whistle 启动启动时的端口<br><img src="http://oih6hf7qs.bkt.clouddn.com/18-6-27/48036690.jpg" alt=""></p>
+<p>新建情景模式, 选择代理服务器<br><img src="/images/article/1075711.jpg" alt="选择代理服务器"></p>
+<p>填写 whistle 启动启动时的端口<br><img src="/images/article/48036690.jpg" alt=""></p>
 <p>3.查看网络请求</p>
 <p>在 <a href="http://local.whistlejs.com/#network" target="_blank" rel="noopener">http://local.whistlejs.com/#network</a> 监听, 打开其他网页后查看请求</p>
-<p><img src="http://oih6hf7qs.bkt.clouddn.com/18-9-2/74710244.jpg" alt="查看请求效果"></p>
+<p><img src="/images/article/74710244.jpg" alt="查看请求效果"></p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>配置常用规则</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转发请求</span></span><br><span class="line">127.0.0.1 so.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求头添加 client</span></span><br><span class="line">*.so.com reqHeaders://(client=username)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地文件映射</span></span><br><span class="line">so.com/test.json file:///Users/haipingxiao/test.json</span><br></pre></td></tr></table></figure>
 <p>https 抓包的需要点击顶部 <code>HTTPS</code> 安装证书后使用.</p>
