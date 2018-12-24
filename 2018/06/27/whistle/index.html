@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/1075711.jpg">
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/48036690.jpg">
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/74710244.jpg">
-<meta property="og:updated_time" content="2018-10-21T14:29:57.534Z">
+<meta property="og:updated_time" content="2018-12-24T13:43:17.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 whistle 抓包调试">
 <meta name="twitter:description" content="网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档. 安装1.安装最新版 Node.js 2.安装 whistle 这里可以使用 npm 或者 tnpm 安装">
@@ -446,9 +446,11 @@
 <p>3.查看网络请求</p>
 <p>在 <a href="http://local.whistlejs.com/#network" target="_blank" rel="noopener">http://local.whistlejs.com/#network</a> 监听, 打开其他网页后查看请求</p>
 <p><img src="/images/article/74710244.jpg" alt="查看请求效果"></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>配置常用规则</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转发请求</span></span><br><span class="line">127.0.0.1 so.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求头添加 client</span></span><br><span class="line">*.so.com reqHeaders://(client=username)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地文件映射</span></span><br><span class="line">so.com/test.json file:///Users/haipingxiao/test.json</span><br></pre></td></tr></table></figure>
-<p>https 抓包的需要点击顶部 <code>HTTPS</code> 安装证书后使用.</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="配置常用规则"><a href="#配置常用规则" class="headerlink" title="配置常用规则"></a>配置常用规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转发请求</span></span><br><span class="line">127.0.0.1 so.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求头添加 client</span></span><br><span class="line">*.so.com reqHeaders://(client=username)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地文件映射</span></span><br><span class="line">so.com/test.json file:///Users/haipingxiao/test.json</span><br></pre></td></tr></table></figure>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>https 的抓包需要安装证书后使用.<br>点击顶部 Help-HTTPS 可以查看安装说明, 在安卓端安装证书遇到的坑:<br>Q:连上代理后无法访问地址 <code>rootca.pro</code><br>A:使用 ip 地址连接, 配置 <code>rootca.pro</code> 的代理</p>
+<p>Q:系统自带浏览器无法下载<br>A:使用 chrome</p>
+<p>Q:下载证书后无法安装<br>A:在系统自带的文件管理器中,找到证书文件手动安装</p>
+<h3 id="导入-fiddler-的抓包请求"><a href="#导入-fiddler-的抓包请求" class="headerlink" title="导入 fiddler 的抓包请求"></a>导入 <code>fiddler</code> 的抓包请求</h3><p>有时候测试同学会发来一个后缀是 <code>saz</code> 的抓包文件, 该文件是通过 fiddler 导出请求. whistle 也支持该格式的导入导出, 使用顶部的 <code>Import</code> 和 <code>Export</code> 即可.</p>
 <h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="http://wproxy.org/whistle/" target="_blank" rel="noopener">官方文档</a></p>
 
       
@@ -772,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">4.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置常用规则"><span class="nav-number">3.1.</span> <span class="nav-text">配置常用规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">3.2.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入-fiddler-的抓包请求"><span class="nav-number">3.3.</span> <span class="nav-text">导入 fiddler 的抓包请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">4.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
