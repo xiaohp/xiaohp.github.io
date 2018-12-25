@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
-<meta name="keywords" content="效率,调试">
+  <meta name="description" content="通过 Vue CLI 生成项目后, 发现组件链接中的 a 标签有个属性 rel=noopener 1&amp;lt;a href=&quot;https://vuejs.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&amp;gt;Core Docs&amp;lt;/a&amp;gt; 这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 window.opener 访问当前页面对象, 可以使用 wind">
+<meta name="keywords" content="HTML,Web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在安卓手机上真机调试移动端网页">
-<meta property="og:url" content="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/index.html">
+<meta property="og:title" content="通过 a 标签在新页面打开链接时使用rel=noopener">
+<meta property="og:url" content="http://xiaohaiping.cc/2018/12/25/a-rel-noopener/index.html">
 <meta property="og:site_name" content="肖海平的博客">
-<meta property="og:description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
+<meta property="og:description" content="通过 Vue CLI 生成项目后, 发现组件链接中的 a 标签有个属性 rel=noopener 1&amp;lt;a href=&quot;https://vuejs.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&amp;gt;Core Docs&amp;lt;/a&amp;gt; 这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 window.opener 访问当前页面对象, 可以使用 wind">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://xiaohaiping.cc/images/article/debug-x5.png">
-<meta property="og:updated_time" content="2018-12-11T14:00:25.935Z">
+<meta property="og:updated_time" content="2018-12-25T16:11:54.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在安卓手机上真机调试移动端网页">
-<meta name="twitter:description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
-<meta name="twitter:image" content="http://xiaohaiping.cc/images/article/debug-x5.png">
+<meta name="twitter:title" content="通过 a 标签在新页面打开链接时使用rel=noopener">
+<meta name="twitter:description" content="通过 Vue CLI 生成项目后, 发现组件链接中的 a 标签有个属性 rel=noopener 1&amp;lt;a href=&quot;https://vuejs.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&amp;gt;Core Docs&amp;lt;/a&amp;gt; 这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 window.opener 访问当前页面对象, 可以使用 wind">
 
 
 
 
 
 
-  <link rel="canonical" href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/"/>
+  <link rel="canonical" href="http://xiaohaiping.cc/2018/12/25/a-rel-noopener/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>在安卓手机上真机调试移动端网页 | 肖海平的博客</title>
+  <title>通过 a 标签在新页面打开链接时使用rel=noopener | 肖海平的博客</title>
   
 
 
@@ -323,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/">
+    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/12/25/a-rel-noopener/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -340,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">在安卓手机上真机调试移动端网页
+          <h2 class="post-title" itemprop="name headline">通过 a 标签在新页面打开链接时使用rel=noopener
               
             
           </h2>
@@ -365,7 +363,7 @@
                 
               
 
-              <time title="Created: 2018-12-11 20:05:29" itemprop="dateCreated datePublished" datetime="2018-12-11T20:05:29+08:00">2018-12-11</time>
+              <time title="Created: 2018-12-25 16:13:29" itemprop="dateCreated datePublished" datetime="2018-12-25T16:13:29+08:00">2018-12-25</time>
             
 
             
@@ -398,10 +396,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/11/mobile-web-debug/#comments" itemprop="discussionUrl">
+                <a href="/2018/12/25/a-rel-noopener/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/12/11/mobile-web-debug/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/12/25/a-rel-noopener/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,16 +427,14 @@
       
 
       
-        <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><ul>
-<li>手机端打开 <a href="http://debugx5.qq.com/" target="_blank" rel="noopener">http://debugx5.qq.com/</a> , 支持微信, 手Q 等 X5 内核浏览器</li>
-<li>在 <code>信息</code> tab 勾选 <code>打开 TBS 内核调试功能</code></li>
-<li>确保手机开发者选项已开启</li>
-<li>手机通过数据线连接电脑, 确保安装驱动程序</li>
-<li>chrome 打开 <code>chrome://inspect/#devices</code> 查看设备</li>
+        <p>通过 <code>Vue CLI</code> 生成项目后, 发现组件链接中的 <code>a</code> 标签有个属性 <code>rel=noopener</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://vuejs.org"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"noopener"</span>&gt;</span>Core Docs<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 <code>window.opener</code> 访问当前页面对象, 可以使用 <code>window.opener.location = newURL</code> 将当前页面导航到其他地址.<br>所以在通过 <code>a</code> 标签在新页面打开链接时, 建议都使用 <code>rel=noopener</code> .</p>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://developers.google.com/web/tools/lighthouse/audits/noopener" target="_blank" rel="noopener">网站使用 rel=”noopener” 打开外部锚</a></li>
+<li><a href="https://mathiasbynens.github.io/rel-noopener/" target="_blank" rel="noopener">About rel=noopener</a></li>
 </ul>
-<a id="more"></a>
-<p><img src="/images/article/debug-x5.png" alt="配置页面"></p>
-<p>参考资源:<br><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/?hl=zh-cn" target="_blank" rel="noopener">远程调试 Android 设备使用入门</a><br><a href="https://x5.tencent.com/" target="_blank" rel="noopener">X5 内核</a></p>
 
       
     </div>
@@ -489,7 +485,7 @@
     <strong>Post author:  </strong>Xiao Haiping</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/" title="在安卓手机上真机调试移动端网页">http://xiaohaiping.cc/2018/12/11/mobile-web-debug/</a>
+    <a href="http://xiaohaiping.cc/2018/12/25/a-rel-noopener/" title="通过 a 标签在新页面打开链接时使用rel=noopener">http://xiaohaiping.cc/2018/12/25/a-rel-noopener/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</li>
@@ -502,9 +498,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/效率/" rel="tag"># 效率</a>
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
           
-            <a href="/tags/调试/" rel="tag"># 调试</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
           
         </div>
       
@@ -517,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/26/vue-cheat-sheet/" rel="next" title="Vue 备忘录">
-                <i class="fa fa-chevron-left"></i> Vue 备忘录
+              <a href="/2018/12/11/mobile-web-debug/" rel="next" title="在安卓手机上真机调试移动端网页">
+                <i class="fa fa-chevron-left"></i> 在安卓手机上真机调试移动端网页
               </a>
             
           </div>
@@ -526,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/25/a-rel-noopener/" rel="prev" title="通过 a 标签在新页面打开链接时使用rel=noopener">
-                通过 a 标签在新页面打开链接时使用rel=noopener <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,17 +576,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -752,22 +735,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速开始"><span class="nav-number">1.</span> <span class="nav-text">快速开始</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -921,9 +888,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://xiaohaiping.cc/2018/12/11/mobile-web-debug/';
-        this.page.identifier = '2018/12/11/mobile-web-debug/';
-        this.page.title = '在安卓手机上真机调试移动端网页';
+        this.page.url = 'http://xiaohaiping.cc/2018/12/25/a-rel-noopener/';
+        this.page.identifier = '2018/12/25/a-rel-noopener/';
+        this.page.title = '通过 a 标签在新页面打开链接时使用rel=noopener';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
