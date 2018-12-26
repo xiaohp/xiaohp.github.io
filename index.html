@@ -341,7 +341,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/12/25/a-rel-noopener/" itemprop="url">
-                  通过 a 标签在新页面打开链接时使用rel=noopener
+                  通过 a 标签在新页面打开链接时使用 rel="noopener"
                 </a>
               
             
@@ -433,9 +433,9 @@
       
         
           
-            <p>通过 <code>Vue CLI</code> 生成项目后, 发现组件链接中的 <code>a</code> 标签有个属性 <code>rel=noopener</code></p>
+            <p>通过 <code>Vue CLI</code> 生成项目后, 发现组件链接中的 <code>a</code> 标签有个属性 <code>rel=&quot;noopener&quot;</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://vuejs.org"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"noopener"</span>&gt;</span>Core Docs<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 <code>window.opener</code> 访问当前页面对象, 可以使用 <code>window.opener.location = newURL</code> 将当前页面导航到其他地址.<br>所以在通过 <code>a</code> 标签在新页面打开链接时, 建议都使用 <code>rel=noopener</code> .</p>
+<p>这里是为了安全性考虑, 如果没有使用这个属性, 新页面可以通过 <code>window.opener</code> 访问当前页面对象, 可以使用 <code>window.opener.location = newURL</code> 将当前页面导航到其他地址.<br>所以在通过 <code>a</code> 标签在新页面打开链接时, 建议都使用 <code>rel=&quot;noopener&quot;</code> .</p>
 <p>参考链接：</p>
 <ul>
 <li><a href="https://developers.google.com/web/tools/lighthouse/audits/noopener" target="_blank" rel="noopener">网站使用 rel=”noopener” 打开外部锚</a></li>
