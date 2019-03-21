@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T16:05:29.147Z">
+<meta property="og:updated_time" content="2019-03-21T15:13:22.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令行笔记">
 <meta name="twitter:description" content="文件与目录pwd print working directory 输出当前所在位置cd change directory 改变工作目录 123cd Desktopcd /etccd ../git ls list 列出目录内容选项 a 表示 all, 会列出包含隐藏文件选项 l 表示 long, 会列出目录下文件的更多信息, 包含权限, 用户, 体积等">
@@ -443,6 +443,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf node_modules.tar.gz -C /home/frontend</span><br></pre></td></tr></table></figure>
 <p><code>grep</code> 查找文件里符合条件的字符串</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'促销活动'</span> error_log20180717004</span><br><span class="line"><span class="comment"># 查找前缀有 error_log20180717 的文件中包含 促销活动 字符串的文件</span></span><br><span class="line">grep <span class="string">'促销活动'</span> error_log20180717*</span><br></pre></td></tr></table></figure>
+<p><code>open</code> macOS 下打开文件或目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开当前目录</span></span><br><span class="line">open .</span><br><span class="line"><span class="comment"># 打开指定目录</span></span><br><span class="line">open ~/Documents</span><br><span class="line"><span class="comment"># 打开指定文件(使用关联的应用)</span></span><br><span class="line">open a.txt</span><br></pre></td></tr></table></figure>
 <h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示当前用户</span></span><br><span class="line">whoami</span><br><span class="line"><span class="comment"># 切换用户并进入该用户的 home 目录</span></span><br><span class="line">sudo su - username</span><br><span class="line"><span class="comment"># 仅切换用户, 停留在当前目录</span></span><br><span class="line">sudo su username</span><br></pre></td></tr></table></figure>
 <p>root 修改普通用户密码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd username</span><br></pre></td></tr></table></figure>
