@@ -432,37 +432,18 @@
 
       
         
-          
-            <p>最近编写移动端布局需要使用 <code>Flexbox</code> 布局, 重新复习一遍.</p>
+          <p>最近编写移动端布局需要使用 <code>Flexbox</code> 布局, 重新复习一遍.</p>
 <h2 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h2><p>在父元素设置 <code>flex</code> 布局:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>设置容器方向:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>设置项目换行:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上两项可以缩写:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">flex-flow</span>: row wrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主轴方向对齐方式:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>交叉轴对齐方式:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>多行时在交叉轴的对齐方式:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-container</span> &#123;</span><br><span class="line">    <span class="attribute">align-content</span>: stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><p>控制项目排列顺序:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>项目的放大比例:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">flex-grow</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>项目的缩小比例:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>项目的初始尺寸:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">flex-basis</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上 3 项的缩写:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span> <span class="number">1</span> <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>设置项目自身的对齐方式, 覆盖默认对齐方式:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-item</span> &#123;</span><br><span class="line">    <span class="attribute">align-self</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考链接：<br><a href="https://www.w3cplus.com/css3/a-visual-guide-to-css3-flexbox-properties.html" target="_blank" rel="noopener">图解CSS3 Flexbox属性</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex 布局教程：实例篇</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/14/flexbox/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
