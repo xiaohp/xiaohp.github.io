@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
-<meta name="keywords" content="调试,效率">
+  <meta name="description" content="常用命令123456789# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker images 启动容器123456789101112131415161718192021222324252627# 生成容器docker run -d -t -p 8000:5000 --name demo ubuntu:18.04# 停止">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在安卓手机上真机调试移动端网页">
-<meta property="og:url" content="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/index.html">
+<meta property="og:title" content="Dokcer 笔记">
+<meta property="og:url" content="http://xiaohaiping.cc/2019/11/11/docker/index.html">
 <meta property="og:site_name" content="肖海平的博客">
-<meta property="og:description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
+<meta property="og:description" content="常用命令123456789# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker images 启动容器123456789101112131415161718192021222324252627# 生成容器docker run -d -t -p 8000:5000 --name demo ubuntu:18.04# 停止">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://xiaohaiping.cc/images/article/debug-x5.png">
-<meta property="og:updated_time" content="2018-12-11T14:00:25.935Z">
+<meta property="og:updated_time" content="2019-11-11T16:58:43.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在安卓手机上真机调试移动端网页">
-<meta name="twitter:description" content="快速开始 手机端打开 http://debugx5.qq.com/ , 支持微信, 手Q 等 X5 内核浏览器 在 信息 tab 勾选 打开 TBS 内核调试功能 确保手机开发者选项已开启 手机通过数据线连接电脑, 确保安装驱动程序 chrome 打开 chrome://inspect/#devices 查看设备">
-<meta name="twitter:image" content="http://xiaohaiping.cc/images/article/debug-x5.png">
+<meta name="twitter:title" content="Dokcer 笔记">
+<meta name="twitter:description" content="常用命令123456789# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker images 启动容器123456789101112131415161718192021222324252627# 生成容器docker run -d -t -p 8000:5000 --name demo ubuntu:18.04# 停止">
 
 
 
 
 
 
-  <link rel="canonical" href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/"/>
+  <link rel="canonical" href="http://xiaohaiping.cc/2019/11/11/docker/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>在安卓手机上真机调试移动端网页 | 肖海平的博客</title>
+  <title>Dokcer 笔记 | 肖海平的博客</title>
   
 
 
@@ -323,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/">
+    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2019/11/11/docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiao Haiping">
@@ -340,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">在安卓手机上真机调试移动端网页
+          <h2 class="post-title" itemprop="name headline">Dokcer 笔记
               
             
           </h2>
@@ -365,7 +363,7 @@
                 
               
 
-              <time title="Created: 2018-12-11 20:05:29" itemprop="dateCreated datePublished" datetime="2018-12-11T20:05:29+08:00">2018-12-11</time>
+              <time title="Created: 2019-11-11 13:53:29" itemprop="dateCreated datePublished" datetime="2019-11-11T13:53:29+08:00">2019-11-11</time>
             
 
             
@@ -398,10 +396,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/11/mobile-web-debug/#comments" itemprop="discussionUrl">
+                <a href="/2019/11/11/docker/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/12/11/mobile-web-debug/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/11/11/docker/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,16 +427,8 @@
       
 
       
-        <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><ul>
-<li>手机端打开 <a href="http://debugx5.qq.com/" target="_blank" rel="noopener">http://debugx5.qq.com/</a> , 支持微信, 手Q 等 X5 内核浏览器</li>
-<li>在 <code>信息</code> tab 勾选 <code>打开 TBS 内核调试功能</code></li>
-<li>确保手机开发者选项已开启</li>
-<li>手机通过数据线连接电脑, 确保安装驱动程序</li>
-<li>chrome 打开 <code>chrome://inspect/#devices</code> 查看设备</li>
-</ul>
-<a id="more"></a>
-<p><img src="/images/article/debug-x5.png" alt="配置页面"></p>
-<p>参考资源:<br><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/?hl=zh-cn" target="_blank" rel="noopener">远程调试 Android 设备使用入门</a><br><a href="https://x5.tencent.com/" target="_blank" rel="noopener">X5 内核</a></p>
+        <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span> 搜索镜像</span><br><span class="line">docker search ubuntu</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 下载镜像</span><br><span class="line">docker pull ubuntu</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 列出本机所有镜像</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 生成容器</span><br><span class="line">docker run -d -t -p 8000:5000 --name demo ubuntu:18.04</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 停止</span><br><span class="line">docker stop demo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动</span><br><span class="line">docker start demo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看正在运行的容器</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看所有容器</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除停止的容器和运行种的容器</span><br><span class="line">docker rm demo</span><br><span class="line">docker rm -f demo1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 在容器种安装软件</span><br><span class="line">docker exec demo apt update</span><br><span class="line">docker exec demo apt -y install python3 pyhon3-pip</span><br><span class="line">docker exec demo apt pip3 install flask</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 拷贝文件</span><br><span class="line">docker exec demo mkdir /code</span><br><span class="line">docker cp a.py "demo:/code/a.py"</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -489,7 +479,7 @@
     <strong>Post author:  </strong>Xiao Haiping</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://xiaohaiping.cc/2018/12/11/mobile-web-debug/" title="在安卓手机上真机调试移动端网页">http://xiaohaiping.cc/2018/12/11/mobile-web-debug/</a>
+    <a href="http://xiaohaiping.cc/2019/11/11/docker/" title="Dokcer 笔记">http://xiaohaiping.cc/2019/11/11/docker/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</li>
@@ -502,9 +492,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/调试/" rel="tag"># 调试</a>
-          
-            <a href="/tags/效率/" rel="tag"># 效率</a>
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
       
@@ -517,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/26/vue-cheat-sheet/" rel="next" title="Vue 备忘录">
-                <i class="fa fa-chevron-left"></i> Vue 备忘录
+              <a href="/2019/11/11/linux/" rel="next" title="linux 笔记">
+                <i class="fa fa-chevron-left"></i> linux 笔记
               </a>
             
           </div>
@@ -526,10 +514,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/25/a-rel-noopener/" rel="prev" title="通过 a 标签在新页面打开链接时使用 rel="noopener"">
-                通过 a 标签在新页面打开链接时使用 rel="noopener" <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -765,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速开始"><span class="nav-number">1.</span> <span class="nav-text">快速开始</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动容器"><span class="nav-number">2.</span> <span class="nav-text">启动容器</span></a></li></ol></div>
             
 
           </div>
@@ -925,9 +909,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://xiaohaiping.cc/2018/12/11/mobile-web-debug/';
-        this.page.identifier = '2018/12/11/mobile-web-debug/';
-        this.page.title = '在安卓手机上真机调试移动端网页';
+        this.page.url = 'http://xiaohaiping.cc/2019/11/11/docker/';
+        this.page.identifier = '2019/11/11/docker/';
+        this.page.title = 'Dokcer 笔记';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
