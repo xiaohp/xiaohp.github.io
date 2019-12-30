@@ -111,14 +111,14 @@
   <meta name="description" content="常用命令123456789101112131415# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker imagesdocker image ls# 删除镜像, 通过 image iddocker image rm 16508e5c265d# 删除镜像, 通过 REPOSITORY:TAGdocker rmi ubun">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dokcer 笔记">
+<meta property="og:title" content="Docker 笔记">
 <meta property="og:url" content="http://xiaohaiping.cc/2019/11/11/docker/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="常用命令123456789101112131415# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker imagesdocker image ls# 删除镜像, 通过 image iddocker image rm 16508e5c265d# 删除镜像, 通过 REPOSITORY:TAGdocker rmi ubun">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-22T10:43:23.562Z">
+<meta property="og:updated_time" content="2019-12-30T14:32:03.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dokcer 笔记">
+<meta name="twitter:title" content="Docker 笔记">
 <meta name="twitter:description" content="常用命令123456789101112131415# 搜索镜像docker search ubuntu# 下载镜像docker pull ubuntu# 列出本机所有镜像docker imagesdocker image ls# 删除镜像, 通过 image iddocker image rm 16508e5c265d# 删除镜像, 通过 REPOSITORY:TAGdocker rmi ubun">
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>Dokcer 笔记 | 肖海平的博客</title>
+  <title>Docker 笔记 | 肖海平的博客</title>
   
 
 
@@ -338,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Dokcer 笔记
+          <h2 class="post-title" itemprop="name headline">Docker 笔记
               
             
           </h2>
@@ -428,6 +428,7 @@
 
       
         <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span> 搜索镜像</span><br><span class="line">docker search ubuntu</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 下载镜像</span><br><span class="line">docker pull ubuntu</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 列出本机所有镜像</span><br><span class="line">docker images</span><br><span class="line">docker image ls</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除镜像, 通过 image id</span><br><span class="line">docker image rm 16508e5c265d</span><br><span class="line"><span class="meta">#</span> 删除镜像, 通过 REPOSITORY:TAG</span><br><span class="line">docker rmi ubuntu:latest</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 生成容器</span><br><span class="line"><span class="meta">#</span> 启动容器并映射端口</span><br><span class="line">docker run -d -t -p 8080:5000 --name demo ubuntu:18.04</span><br><span class="line"><span class="meta">#</span> 参数说明</span><br><span class="line"><span class="meta">#</span> -d --detach 在后台运行容器，打印容器 id</span><br><span class="line"><span class="meta">#</span> -t --tty 分配一个虚拟 shell</span><br><span class="line"><span class="meta">#</span> -p 端口映射</span><br><span class="line"><span class="meta">#</span> -i --interactive 保持 STDIN 打开</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 进入容器的终端</span><br><span class="line">docker exec -it demo bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 停止</span><br><span class="line">docker stop demo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动</span><br><span class="line">docker start demo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看正在运行的容器</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看所有容器</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除停止的容器</span><br><span class="line">docker rm demo</span><br><span class="line"><span class="meta">#</span> 删除运行中的容器需要 -f force</span><br><span class="line">docker rm -f demo1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 在容器中运行命令安装软件</span><br><span class="line">docker exec demo apt update</span><br><span class="line">docker exec demo apt -y install python3 pyhon3-pip</span><br><span class="line">docker exec demo apt pip3 install flask</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 拷贝文件</span><br><span class="line">docker exec demo mkdir /code</span><br><span class="line">docker cp a.py "demo:/code/a.py"</span><br></pre></td></tr></table></figure>
 
       
@@ -479,7 +480,7 @@
     <strong>Post author:  </strong>Xiao Haiping</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://xiaohaiping.cc/2019/11/11/docker/" title="Dokcer 笔记">http://xiaohaiping.cc/2019/11/11/docker/</a>
+    <a href="http://xiaohaiping.cc/2019/11/11/docker/" title="Docker 笔记">http://xiaohaiping.cc/2019/11/11/docker/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</li>
@@ -917,7 +918,7 @@
       var disqus_config = function () {
         this.page.url = 'http://xiaohaiping.cc/2019/11/11/docker/';
         this.page.identifier = '2019/11/11/docker/';
-        this.page.title = 'Dokcer 笔记';
+        this.page.title = 'Docker 笔记';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
