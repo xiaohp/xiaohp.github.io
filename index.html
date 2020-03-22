@@ -321,6 +321,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2020/03/22/vue-communication/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Haiping">
+      <meta itemprop="description" content="但行好事，莫问前程。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="肖海平的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/22/vue-communication/" itemprop="url">
+                  Vue 组件通信的几种方式
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-03-22 16:13:29" itemprop="dateCreated datePublished" datetime="2020-03-22T16:13:29+08:00">2020-03-22</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记本/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/22/vue-communication/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/03/22/vue-communication/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Prop-和-事件回调"><a href="#Prop-和-事件回调" class="headerlink" title="Prop 和 事件回调"></a>Prop 和 事件回调</h2><p>父组件通过 <code>prop</code> 向子组件传递数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">post</span> <span class="attr">title</span>=<span class="string">"hello"</span>&gt;</span><span class="tag">&lt;/<span class="name">post</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>子组件通过自定义事件向父组件传递数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件触发 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"$emit('hello')"</span>&gt;</span></span><br><span class="line">    Click me to be welcomed</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 父组件监听 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">example</span> <span class="attr">v-on:hello</span>=<span class="string">"world"</span>&gt;</span><span class="tag">&lt;/<span class="name">example</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p>复杂项目可以使用 <a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a> 进行状态管理，配合 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener">vue-devtools</a> 能够更好的追踪状态。</p>
+<h2 id="单独的事件管理中心-EventBus"><a href="#单独的事件管理中心-EventBus" class="headerlink" title="单独的事件管理中心 EventBus"></a>单独的事件管理中心 EventBus</h2><p>单独使用一个 Vue 实例来管理事件 <a href="https://cn.vuejs.org/v2/guide/migration.html#dispatch-%E5%92%8C-broadcast-%E6%9B%BF%E6%8D%A2" target="_blank" rel="noopener">文档的例子</a>，但是在复杂的场景下，事件的触发和监听可能散落在各个地方，不利于维护，更推荐使用 <code>Vuex</code>。</p>
+<h2 id="依赖注入-provide-和-inject"><a href="#依赖注入-provide-和-inject" class="headerlink" title="依赖注入 provide 和 inject"></a>依赖注入 <code>provide</code> 和 <code>inject</code></h2><p>类似 <code>React</code> 里面的 <code>context</code>，相当于大范围有效的 prop。<a href="https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5" target="_blank" rel="noopener">文档的例子</a> ，在项目中使用不多。</p>
+<h2 id="访问组件实例"><a href="#访问组件实例" class="headerlink" title="访问组件实例"></a>访问组件实例</h2><p><code>$root</code> 属性用来从一个子组件访问根组件的实例，<code>$parent</code> 属性访问父组件的实例。不利于组件解耦，不推荐使用。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">方案</th>
+<th style="text-align:right">适用场景</th>
+<th style="text-align:center">是否推荐使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Prop</td>
+<td style="text-align:right">父子组件</td>
+<td style="text-align:center">推荐</td>
+</tr>
+<tr>
+<td style="text-align:left">Vuex</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">推荐</td>
+</tr>
+<tr>
+<td style="text-align:left">EventBus</td>
+<td style="text-align:right">任意组件之间</td>
+<td style="text-align:center">复杂项目不推荐</td>
+</tr>
+<tr>
+<td style="text-align:left">依赖注入</td>
+<td style="text-align:right">子孙组件之间</td>
+<td style="text-align:center">复杂项目不推荐</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2020/02/03/git-proxy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1849,181 +2053,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiaohaiping.cc/2018/06/27/whistle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiao Haiping">
-      <meta itemprop="description" content="但行好事，莫问前程。">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="肖海平的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/27/whistle/" itemprop="url">
-                  使用 whistle 抓包调试
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-06-27 16:13:29" itemprop="dateCreated datePublished" datetime="2018-06-27T16:13:29+08:00">2018-06-27</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记本/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/27/whistle/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/27/whistle/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档.</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1.安装最新版 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
-<p>2.安装 <a href="http://wproxy.org/whistle/" target="_blank" rel="noopener">whistle</a></p>
-<p>这里可以使用 npm 或者 tnpm 安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g whistle</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可能需要 sudo</span></span><br><span class="line">sudo npm install -g whistle</span><br></pre></td></tr></table></figure>
-<p>3.Chrome 浏览器安装代理插件 <a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif" target="_blank" rel="noopener">Proxy SwitchyOmega</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/27/whistle/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2075,7 +2104,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2169,7 +2198,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">30</span>
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
