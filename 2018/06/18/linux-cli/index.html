@@ -109,14 +109,14 @@
 
 
   <meta name="description" content="帮助12345# manual 缩写# 查看帮助man ls# 查看指定章节man 7 man">
-<meta name="keywords" content="linux,CLI,macOS">
+<meta name="keywords" content="CLI,macOS,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 命令行笔记">
 <meta property="og:url" content="http://xiaohaiping.cc/2018/06/18/linux-cli/index.html">
 <meta property="og:site_name" content="肖海平的博客">
 <meta property="og:description" content="帮助12345# manual 缩写# 查看帮助man ls# 查看指定章节man 7 man">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-30T09:38:01.040Z">
+<meta property="og:updated_time" content="2020-04-09T10:53:49.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令行笔记">
 <meta name="twitter:description" content="帮助12345# manual 缩写# 查看帮助man ls# 查看指定章节man 7 man">
@@ -458,8 +458,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看带 node 字符串的进程</span></span><br><span class="line">ps ax | grep node</span><br></pre></td></tr></table></figure>
 <h2 id="使用-vi-编辑文件"><a href="#使用-vi-编辑文件" class="headerlink" title="使用 vi 编辑文件"></a>使用 vi 编辑文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi README.md</span><br></pre></td></tr></table></figure>
 <p>按小写 <code>i</code> 进入 vi 的编辑模式;<br>按 <code>esc</code> 退出编辑模式;<br>按 <code>/</code> 搜索文件内容,输入要搜索的关键词, <code>n</code> 继续查找, <code>N</code> 往前查找<br>保存并退出 <code>:wq</code><br>不保存退出 <code>:q!</code></p>
-<h2 id="终端走代理"><a href="#终端走代理" class="headerlink" title="终端走代理"></a>终端走代理</h2><p>在 macOS 下, 设置系统代理后, 对普通应用有效, 但是终端需要额外设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">"http://127.0.0.1:1087"</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">"http://127.0.0.1:1087"</span></span><br><span class="line"><span class="comment"># 使用 shadowsocks</span></span><br><span class="line"><span class="built_in">export</span> ALL_PROXY=<span class="string">"socks5://127.0.0.1:1086"</span></span><br></pre></td></tr></table></figure>
 <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p><code>telnet</code> 测试网络是否连通</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet 59.37.96.63 80</span><br></pre></td></tr></table></figure>
 <p>查看本机 ip</p>
@@ -541,11 +539,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
             <a href="/tags/CLI/" rel="tag"># CLI</a>
           
             <a href="/tags/macOS/" rel="tag"># macOS</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
         </div>
       
@@ -814,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助"><span class="nav-number">1.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">2.</span> <span class="nav-text">文件与目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户"><span class="nav-number">3.</span> <span class="nav-text">用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊符号"><span class="nav-number">4.</span> <span class="nav-text">特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找相关"><span class="nav-number">5.</span> <span class="nav-text">查找相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-vi-编辑文件"><span class="nav-number">6.</span> <span class="nav-text">使用 vi 编辑文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端走代理"><span class="nav-number">7.</span> <span class="nav-text">终端走代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">8.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程"><span class="nav-number">9.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">11.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">12.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助"><span class="nav-number">1.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">2.</span> <span class="nav-text">文件与目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户"><span class="nav-number">3.</span> <span class="nav-text">用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊符号"><span class="nav-number">4.</span> <span class="nav-text">特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找相关"><span class="nav-number">5.</span> <span class="nav-text">查找相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-vi-编辑文件"><span class="nav-number">6.</span> <span class="nav-text">使用 vi 编辑文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">7.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程"><span class="nav-number">8.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">9.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">10.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">11.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
