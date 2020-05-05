@@ -444,7 +444,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 首次初始化</span></span><br><span class="line">    determineDropDirection()</span><br><span class="line">    <span class="comment">// // 绑定鼠标进入时初始化，列表内容变动时需要更新</span></span><br><span class="line">    $(<span class="string">'body'</span>).on(<span class="string">'mouseenter'</span>, <span class="string">'.dropdown'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        determineDropDirection()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>由于用到下拉菜单的页面可能比较多，若在每次AJAX请求结束后进行检测，需要修改很多地方。这里是采用事件委托的方式，每次鼠标进入菜单进行检测。</p>
 <ul>
-<li><a href="http://xiaohaiping.cc/Practice-Demos/Bootstrap-dropdown-list/index.html">点击查看效果</a><br><img src="/images/article/20170810-164936046.png" alt="页面效果"></li>
+<li><a href="http://xiaohaiping.cc/Practice-Demos/Bootstrap-dropdown-list/index.html" target="_blank" rel="noopener">点击查看效果</a><br><img src="/images/article/20170810-164936046.png" alt="页面效果"></li>
 </ul>
 <p>参考链接：</p>
 <ul>
