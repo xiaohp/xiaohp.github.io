@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/1075711.png">
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/48036690.png">
 <meta property="og:image" content="http://xiaohaiping.cc/images/article/74710244.png">
-<meta property="og:updated_time" content="2020-04-02T01:40:08.122Z">
+<meta property="og:updated_time" content="2020-05-05T09:23:43.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 whistle 抓包调试">
 <meta name="twitter:description" content="网上抓包调试工具设置大都是基于 Fiddler 的, macOS 下的设置大多是基于 charles. 后来发现了跨平台的 whistle, 在 windows 和 macOS 下均可方便的切换使用. 本文目的在于用5分钟快速配置抓包环境, 覆盖日常前台开发的场景.更多的功能可以查看官方文档. 安装1.安装最新版 Node.js 2.安装 whistle 这里可以使用 npm 或者 tnpm 安装">
@@ -453,7 +453,7 @@
 <h3 id="导入-fiddler-的抓包请求"><a href="#导入-fiddler-的抓包请求" class="headerlink" title="导入 fiddler 的抓包请求"></a>导入 <code>fiddler</code> 的抓包请求</h3><p>有时候测试同学会发来一个后缀是 <code>saz</code> 的抓包文件, 该文件是通过 fiddler 导出请求. whistle 也支持该格式的导入导出, 使用顶部的 <code>Import</code> 和 <code>Export</code> 即可.</p>
 <h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ul>
 <li>安卓端微信最新版7.0 不信任用户证书, 无法抓取 https 的包.(解决方案: 微信端暂时使用 iOS 进行抓包)</li>
-<li><code>localhost</code> 无法抓包, 需要在 SwitchyOmega 的不代理的地址列表中, 添加 <code>&lt;-loopback&gt;</code></li>
+<li><code>localhost</code> 无法抓包, 需要在 SwitchyOmega 的不代理的地址列表中, 添加 <code>&lt;-loopback&gt;</code>, 一般情况下不需要抓这个包</li>
 <li>Vue CLI 生成的项目, 映射到其他域名, 通过 whistle 转发到本地时报错 <code>Invalid Host header</code>, 需要配置 <code>devServer</code> 中 <code>disableHostCheck</code> 为 <code>true</code>. 以关闭 <code>webpack-dev-server</code> 的安全验证</li>
 </ul>
 <h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p><a href="http://wproxy.org/whistle/" target="_blank" rel="noopener">官方文档</a><br><a href="https://github.com/avwo/whistle/issues/266" target="_blank" rel="noopener">localhost 代理问题</a><br><a href="https://blog.csdn.net/guzhao593/article/details/85918869" target="_blank" rel="noopener">Vue CLI 出现Invalid Host header的解决方案</a></p>
